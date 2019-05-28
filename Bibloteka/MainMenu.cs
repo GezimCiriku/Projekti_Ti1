@@ -18,42 +18,42 @@ namespace Bibloteka
             InitializeComponent();
         }
 
+        BooksForm bf = new BooksForm();
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             home_Control1.Visible = true;
             SidePanel.Top = btnHome.Top;
-          //  crudBooks_Control1.Visible = false;
+            bf.Hide();  
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
-
             home_Control1.Visible = false;
-            SidePanel.Top = btnBooks.Top;
-            BooksForm bf = new BooksForm();
+            SidePanel.Top = btnBooks.Top;    
             bf.Show();
-            //crudBooks_Control1.Visible = true;
+            bf.Focus();
         }
         
         private void btnReaders_Click(object sender, EventArgs e)
         {
             home_Control1.Visible = false;
             SidePanel.Top = btnReaders.Top;
-          //  crudBooks_Control1.Visible = false;
+            bf.Hide();
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
             home_Control1.Visible = false;
             SidePanel.Top = btnStaff.Top;
-          //  crudBooks_Control1.Visible = false;
+            bf.Hide();
         }
 
         private void btnLocations_Click(object sender, EventArgs e)
         {
             home_Control1.Visible = false;
             SidePanel.Top = btnLocations.Top;
-          //  crudBooks_Control1.Visible = false;
+            bf.Hide();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -61,6 +61,7 @@ namespace Bibloteka
             SidePanel.Top = btnLogOut.Top;
 
             this.Hide();
+            bf.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.Closed += (s, args) => this.Close();
             loginForm.Show();
@@ -70,24 +71,25 @@ namespace Bibloteka
         {
             home_Control1.Visible = false;
             SidePanel.Top = btnViewProfile.Top;
-         //   crudBooks_Control1.Visible = false;
+            bf.Hide();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-         //   crudBooks_Control1.Visible = false;
+         
         }
 
         private void btnCloseMainMenu_Click(object sender, EventArgs e)
         {
             this.Close();
+            bf.Close();
         }
 
         private void btnLoans_Click(object sender, EventArgs e)
         {
             home_Control1.Visible = false;
             SidePanel.Top = btnLoans.Top;
-         //   crudBooks_Control1.Visible = false;
+            bf.Hide();
         }
   
     }

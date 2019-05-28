@@ -22,16 +22,16 @@ namespace Bibloteka
 
         private void BooksForm_Load(object sender, EventArgs e)
         {
-            //LibriBLL.SelectBooks(dgvBooks);
+            LibriBLL.SelectBooks(dgvBooks);
 
-            //DataTable dt = new DataTable();
-            //dt = KategoriaBLL.SelectKategories();
-            //cmbKategoriaID.DataSource = dt;
-            //cmbKategoriaID.DisplayMember = dt.Columns[1].ColumnName;
-            //cmbKategoriaID.ValueMember = dt.Columns[0].ColumnName;
+            DataTable dt = new DataTable();
+            dt = KategoriaBLL.SelectKategories();
+            cmbKategoriaID.DataSource = dt;
+            cmbKategoriaID.DisplayMember = dt.Columns[1].ColumnName;
+            cmbKategoriaID.ValueMember = dt.Columns[0].ColumnName;
 
-            //btnEdit.Enabled = false;
-            //btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            btnDelete.Enabled = false;
         }
 
         public void Clear()
@@ -57,24 +57,21 @@ namespace Bibloteka
         {
             Kategoria objK = new Kategoria(cmbKategoriaID.SelectedIndex + 1, cmbKategoriaID.Text);
 
-            Libri objL = new Libri(int.Parse(txtLibriID.Text), txtTitulli.Text, txtISBN.Text,
+            Libri objL = new Libri(0, txtTitulli.Text, txtISBN.Text,
                 txtShtepiaBotuese.Text, txtGjuha.Text,
                 objK, int.Parse(txtVitiBotimit.Text), int.Parse(txtNrKopjeve.Text));
 
             Autori objA = new Autori();
             objA.Emri = txtEmriAutori.Text;
             objA.Mbiemri = txtMbiemriAutori.Text;
-            //kujdesu per AutoriID si parameter out
-
+            
             Libri_Autori objLA = new Libri_Autori(objL, objA);
 
             try
             {
-                if (AutoriBLL.InsertAutor(objA))
-                {
-                    LibriBLL.InsertBook(objL);
-                }
-
+                objL.AutoriID = AutoriBLL.InsertAutor(objA);
+                objL.LibriID=LibriBLL.InsertBook(objL);
+                txtLibriID.Text = objL.LibriID.ToString();
 
                 MessageBox.Show("Succesful Insert");
             }
@@ -83,7 +80,6 @@ namespace Bibloteka
                 MessageBox.Show("Unsuccesful Insert\n" + ex.Message);
                 throw;
             }
-
             dgvBooks.DataSource = LibriDAL.GetBooks();
         }
 
@@ -115,7 +111,7 @@ namespace Bibloteka
                     txtShtepiaBotuese.Text, txtGjuha.Text,
                     objK, int.Parse(txtVitiBotimit.Text), int.Parse(txtNrKopjeve.Text));
 
-              //  objL.AutoriID = int.Parse(txtAutoriID.Text);
+                //  objL.AutoriID = int.Parse(txtAutoriID.Text);
 
                 if (LibriBLL.Edit(objL))
                 {
@@ -136,7 +132,7 @@ namespace Bibloteka
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int LibriID = int.Parse(txtLibriID.Text);
-           // int AutoriID = int.Parse(txtAutoriID.Text);
+            // int AutoriID = int.Parse(txtAutoriID.Text);
 
             //if (LibriBLL.Delete(LibriID, AutoriID))
             //{

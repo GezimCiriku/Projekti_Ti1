@@ -11,7 +11,7 @@ namespace Bibloteka.DAL
 {
     public class AutoriDAL
     {
-        public static bool Insert(Autori autori)
+        public static int Insert(Autori autori)
         {
             SqlConnection conn = DBHelper.GetConnection();
 
@@ -31,23 +31,15 @@ namespace Bibloteka.DAL
                 sqlPrm.Value = autori.Mbiemri;
 
                 sqlPrm = InsertAutoriCmd.Parameters.Add("@AutoriID", SqlDbType.Int);
-                sqlPrm.Direction = ParameterDirection.Input;
-                sqlPrm.Value = autori.AutoriID;
-
+                sqlPrm.Direction = ParameterDirection.Output;
 
 
                 conn.Open();
 
-               int rows= InsertAutoriCmd.ExecuteNonQuery();
-                if (rows>0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                InsertAutoriCmd.ExecuteNonQuery();
 
+                int AutoriID = int.Parse(sqlPrm.Value.ToString());
+                return AutoriID;
             }
             catch (Exception)
             {

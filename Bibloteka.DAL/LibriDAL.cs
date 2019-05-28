@@ -66,7 +66,7 @@ namespace Bibloteka.DAL
             return listaLibrave;
         }
 
-        public static bool Insert(Libri libri)
+        public static int Insert(Libri libri)
         {
             SqlConnection conn = DBHelper.GetConnection();
             try
@@ -76,7 +76,7 @@ namespace Bibloteka.DAL
                 SqlCommand cmd = new SqlCommand(proc, conn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@LibriID", libri.LibriID);
+               // cmd.Parameters.AddWithValue("@LibriID", libri.LibriID);
                 cmd.Parameters.AddWithValue("@Titulli", libri.Titulli);
                 cmd.Parameters.AddWithValue("@Botuesi", libri.ShtepiaBotuese);
                 cmd.Parameters.AddWithValue("@Gjuha", libri.Gjuha);
@@ -87,9 +87,15 @@ namespace Bibloteka.DAL
                 cmd.Parameters.AddWithValue("@NrKopjeve", libri.NrKopjeve);
                 cmd.Parameters.AddWithValue("@AutoriID", libri.AutoriID);
 
+                SqlParameter sqlPrm = cmd.Parameters.Add("@LibriID", SqlDbType.Int);
+                sqlPrm.Direction = ParameterDirection.Output;
+
+
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                return true;
+
+                int LibriID = int.Parse(sqlPrm.Value.ToString());
+                return LibriID;
             }
             catch (Exception)
             {

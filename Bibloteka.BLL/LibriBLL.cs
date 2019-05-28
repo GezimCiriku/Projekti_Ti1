@@ -17,7 +17,7 @@ namespace Bibloteka.BLL
             dg.DataSource = LibriDAL.GetBooks();
         }
 
-        public static bool InsertBook(Libri libri)
+        public static int InsertBook(Libri libri)
         {
             return LibriDAL.Insert(libri);
 

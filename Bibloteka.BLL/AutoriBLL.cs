@@ -10,7 +10,7 @@ namespace Bibloteka.BLL
 {
     public class AutoriBLL
     {
-        public static bool InsertAutor(Autori autori)
+        public static int InsertAutor(Autori autori)
         {
             return AutoriDAL.Insert(autori);
         }

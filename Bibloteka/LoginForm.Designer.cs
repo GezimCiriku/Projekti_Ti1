@@ -70,7 +70,7 @@
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(281, 52);
-            this.txtUsername.TabIndex = 0;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.text = "Nofka";
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             // 
@@ -117,7 +117,7 @@
             this.panel1.Location = new System.Drawing.Point(57, 361);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(281, 52);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 2;
             // 
             // txtPassword
             // 
@@ -165,7 +165,7 @@
             this.btnLogin.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(181, 48);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.TabIndex = 0;
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 

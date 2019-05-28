@@ -201,6 +201,7 @@
             // 
             // txtLibriID
             // 
+            this.txtLibriID.Enabled = false;
             this.txtLibriID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLibriID.Location = new System.Drawing.Point(232, 127);
             this.txtLibriID.Name = "txtLibriID";
@@ -425,7 +426,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 777);
+            this.ClientSize = new System.Drawing.Size(1600, 806);
             this.Controls.Add(this.dgvBooks);
             this.Controls.Add(this.txtVitiBotimit);
             this.Controls.Add(this.cmbKategoriaID);

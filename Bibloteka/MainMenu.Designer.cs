@@ -45,7 +45,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBibloteka = new System.Windows.Forms.Label();
             this.home_Control1 = new Bibloteka.Home_Control();
-           
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseMainMenu)).BeginInit();
@@ -433,14 +432,10 @@
             // home_Control1
             // 
             this.home_Control1.BackColor = System.Drawing.Color.Transparent;
-            this.home_Control1.Location = new System.Drawing.Point(334, 224);
+            this.home_Control1.Location = new System.Drawing.Point(334, 193);
             this.home_Control1.Name = "home_Control1";
             this.home_Control1.Size = new System.Drawing.Size(1201, 617);
             this.home_Control1.TabIndex = 4;
-            // 
-            // crudBooks_Control1
-            // 
-            
             // 
             // MainMenu
             // 
