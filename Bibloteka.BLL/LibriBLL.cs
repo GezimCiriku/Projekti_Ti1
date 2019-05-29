@@ -20,7 +20,6 @@ namespace Bibloteka.BLL
         public static int InsertBook(Libri libri)
         {
             return LibriDAL.Insert(libri);
-
         }
 
         public static bool Edit(Libri libri)
@@ -32,5 +31,6 @@ namespace Bibloteka.BLL
         {
             return LibriDAL.DeleteLibri(libriID,autoriID);
         }
+
     }
 }

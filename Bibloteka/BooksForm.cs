@@ -20,6 +20,8 @@ namespace Bibloteka
             InitializeComponent();
         }
 
+        string txtAutoriId;
+
         private void BooksForm_Load(object sender, EventArgs e)
         {
             LibriBLL.SelectBooks(dgvBooks);
@@ -32,6 +34,7 @@ namespace Bibloteka
 
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
+            btnShto.Enabled = false;
         }
 
         public void Clear()
@@ -46,11 +49,16 @@ namespace Bibloteka
             txtNrKopjeve.Text = "";
             txtEmriAutori.Text = "";
             txtMbiemriAutori.Text = "";
+
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            btnShto.Enabled = false;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
+           
         }
 
         private void btnShto_Click(object sender, EventArgs e)
@@ -65,7 +73,7 @@ namespace Bibloteka
             objA.Emri = txtEmriAutori.Text;
             objA.Mbiemri = txtMbiemriAutori.Text;
             
-            Libri_Autori objLA = new Libri_Autori(objL, objA);
+             Libri_Autori objLA = new Libri_Autori(objL, objA);
 
             try
             {
@@ -81,6 +89,7 @@ namespace Bibloteka
                 throw;
             }
             dgvBooks.DataSource = LibriDAL.GetBooks();
+            Clear();
         }
 
         private void dgvBooks_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -94,8 +103,11 @@ namespace Bibloteka
             cmbKategoriaID.Text = dgvBooks.Rows[rowIndex].Cells[5].Value.ToString();
             txtVitiBotimit.Text = dgvBooks.Rows[rowIndex].Cells[6].Value.ToString();
             txtNrKopjeve.Text = dgvBooks.Rows[rowIndex].Cells[7].Value.ToString();
+            txtAutoriId = dgvBooks.Rows[rowIndex].Cells[8].Value.ToString();
             txtEmriAutori.Text = dgvBooks.Rows[rowIndex].Cells[9].Value.ToString().Split(' ')[0];
             txtMbiemriAutori.Text = dgvBooks.Rows[rowIndex].Cells[9].Value.ToString().Split(' ')[1];
+
+
 
             btnDelete.Enabled = true;
             btnEdit.Enabled = true;
@@ -111,11 +123,12 @@ namespace Bibloteka
                     txtShtepiaBotuese.Text, txtGjuha.Text,
                     objK, int.Parse(txtVitiBotimit.Text), int.Parse(txtNrKopjeve.Text));
 
-                //  objL.AutoriID = int.Parse(txtAutoriID.Text);
+                objL.AutoriID = int.Parse(txtAutoriId);
 
                 if (LibriBLL.Edit(objL))
                 {
                     MessageBox.Show("Updated Succesfuly");
+                    Clear();
                     LibriBLL.SelectBooks(dgvBooks);
                 }
                 else
@@ -132,21 +145,29 @@ namespace Bibloteka
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int LibriID = int.Parse(txtLibriID.Text);
-            // int AutoriID = int.Parse(txtAutoriID.Text);
+            int AutoriID = int.Parse(txtAutoriId);
 
-            //if (LibriBLL.Delete(LibriID, AutoriID))
-            //{
-            //    MessageBox.Show("Delete sucessfully");
-            //    Clear();
-            //    btnDelete.Enabled = false;
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Delete failed");
-            //}
+            if (LibriBLL.Delete(LibriID, AutoriID))
+            {
+                MessageBox.Show("Delete sucessfully");
+                Clear();
+            }
+            else
+            {
+                MessageBox.Show("Delete failed");
+            }
 
             LibriBLL.SelectBooks(dgvBooks);
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtLibriID_TextChanged(object sender, EventArgs e)
+        {
+            btnShto.Enabled = true;
         }
     }
 }

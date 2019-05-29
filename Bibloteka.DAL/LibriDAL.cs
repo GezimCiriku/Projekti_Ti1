@@ -12,11 +12,12 @@ namespace Bibloteka.DAL
 {
     public class LibriDAL
     {
+       
+
         public static List<Libri_Autori> GetBooks()
         {
             List<Libri_Autori> listaLibrave = new List<Libri_Autori>();
             SqlConnection conn = DBHelper.GetConnection();
-
 
             try
             {
@@ -120,7 +121,7 @@ namespace Bibloteka.DAL
                 conn.Open();
                 cmd.Connection = conn;
 
-                SqlParameter sqlPrm = cmd.Parameters.Add("@ID", SqlDbType.Int);
+                SqlParameter sqlPrm = cmd.Parameters.Add("@LibriID", SqlDbType.Int);
                 sqlPrm.Direction = ParameterDirection.Input;
                 sqlPrm.Value = libri.LibriID;
 
@@ -128,11 +129,11 @@ namespace Bibloteka.DAL
                 sqlPrm.Direction = ParameterDirection.Input;
                 sqlPrm.Value = libri.Titulli;
 
-                sqlPrm = cmd.Parameters.Add("@BotuesiID", SqlDbType.VarChar);
+                sqlPrm = cmd.Parameters.Add("@Botuesi", SqlDbType.VarChar);
                 sqlPrm.Direction = ParameterDirection.Input;
                 sqlPrm.Value = libri.ShtepiaBotuese;
 
-                sqlPrm = cmd.Parameters.Add("@GjuhaID", SqlDbType.VarChar);
+                sqlPrm = cmd.Parameters.Add("@Gjuha", SqlDbType.VarChar);
                 sqlPrm.Direction = ParameterDirection.Input;
                 sqlPrm.Value = libri.Gjuha;
 
@@ -157,7 +158,6 @@ namespace Bibloteka.DAL
             }
             catch (Exception)
             {
-               
                 throw;
             }
             finally
@@ -194,5 +194,10 @@ namespace Bibloteka.DAL
                 throw;
             }
         }
+
+        //public static List<Libri_Autori> SearchBooks(string search)
+        //{
+          
+        //}
     }
 }

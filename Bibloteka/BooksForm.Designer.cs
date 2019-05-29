@@ -51,12 +51,13 @@
             this.lblISBN = new System.Windows.Forms.Label();
             this.lblTitulli = new System.Windows.Forms.Label();
             this.lblLibriID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnDelete = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEdit = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnShto = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.btnAddCategory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,6 +78,7 @@
             this.txtVitiBotimit.Name = "txtVitiBotimit";
             this.txtVitiBotimit.Size = new System.Drawing.Size(236, 26);
             this.txtVitiBotimit.TabIndex = 6;
+            this.txtVitiBotimit.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
             // 
             // cmbKategoriaID
             // 
@@ -120,6 +122,7 @@
             this.txtMbiemriAutori.Name = "txtMbiemriAutori";
             this.txtMbiemriAutori.Size = new System.Drawing.Size(236, 28);
             this.txtMbiemriAutori.TabIndex = 9;
+            this.txtMbiemriAutori.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
             // 
             // txtEmriAutori
             // 
@@ -128,6 +131,7 @@
             this.txtEmriAutori.Name = "txtEmriAutori";
             this.txtEmriAutori.Size = new System.Drawing.Size(236, 28);
             this.txtEmriAutori.TabIndex = 8;
+            this.txtEmriAutori.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
             // 
             // txtNrKopjeve
             // 
@@ -136,6 +140,7 @@
             this.txtNrKopjeve.Name = "txtNrKopjeve";
             this.txtNrKopjeve.Size = new System.Drawing.Size(236, 28);
             this.txtNrKopjeve.TabIndex = 7;
+            this.txtNrKopjeve.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
             // 
             // txtGjuha
             // 
@@ -144,6 +149,7 @@
             this.txtGjuha.Name = "txtGjuha";
             this.txtGjuha.Size = new System.Drawing.Size(236, 28);
             this.txtGjuha.TabIndex = 4;
+            this.txtGjuha.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
             // 
             // txtShtepiaBotuese
             // 
@@ -152,6 +158,7 @@
             this.txtShtepiaBotuese.Name = "txtShtepiaBotuese";
             this.txtShtepiaBotuese.Size = new System.Drawing.Size(236, 28);
             this.txtShtepiaBotuese.TabIndex = 3;
+            this.txtShtepiaBotuese.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
             // 
             // lblMbiemriAutori
             // 
@@ -170,6 +177,7 @@
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(236, 28);
             this.txtISBN.TabIndex = 2;
+            this.txtISBN.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
             // 
             // lblEmriAutori
             // 
@@ -188,6 +196,7 @@
             this.txtTitulli.Name = "txtTitulli";
             this.txtTitulli.Size = new System.Drawing.Size(236, 28);
             this.txtTitulli.TabIndex = 1;
+            this.txtTitulli.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
             // 
             // lblNrKopjeve
             // 
@@ -207,6 +216,7 @@
             this.txtLibriID.Name = "txtLibriID";
             this.txtLibriID.Size = new System.Drawing.Size(236, 28);
             this.txtLibriID.TabIndex = 0;
+            this.txtLibriID.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
             // 
             // lblVitiBotimit
             // 
@@ -278,13 +288,14 @@
             this.lblLibriID.TabIndex = 28;
             this.lblLibriID.Text = "LibriID:";
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(624, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(593, 28);
-            this.textBox1.TabIndex = 14;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(624, 72);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(593, 28);
+            this.txtSearch.TabIndex = 14;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblSearch
             // 
@@ -422,11 +433,24 @@
             this.lblInfo.TabIndex = 11;
             this.lblInfo.Text = "Menaxhimi i Librave";
             // 
+            // btnAddCategory
+            // 
+            this.btnAddCategory.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddCategory.BackgroundImage")));
+            this.btnAddCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddCategory.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddCategory.Location = new System.Drawing.Point(475, 353);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(46, 44);
+            this.btnAddCategory.TabIndex = 41;
+            this.btnAddCategory.UseVisualStyleBackColor = false;
+            // 
             // BooksForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 806);
+            this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.dgvBooks);
             this.Controls.Add(this.txtVitiBotimit);
             this.Controls.Add(this.cmbKategoriaID);
@@ -449,7 +473,7 @@
             this.Controls.Add(this.lblISBN);
             this.Controls.Add(this.lblTitulli);
             this.Controls.Add(this.lblLibriID);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -491,11 +515,12 @@
         private System.Windows.Forms.Label lblISBN;
         private System.Windows.Forms.Label lblTitulli;
         private System.Windows.Forms.Label lblLibriID;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblSearch;
         private Bunifu.Framework.UI.BunifuFlatButton btnDelete;
         private Bunifu.Framework.UI.BunifuFlatButton btnEdit;
         private Bunifu.Framework.UI.BunifuFlatButton btnShto;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Button btnAddCategory;
     }
 }
