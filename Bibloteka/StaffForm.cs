@@ -12,17 +12,17 @@ using System.Windows.Forms;
 
 namespace Bibloteka
 {
-    public partial class ReadersForm : Form
+    public partial class StaffForm : Form
     {
-        public ReadersForm()
+        public StaffForm()
         {
             InitializeComponent();
         }
 
-        private void ReadersForm_Load(object sender, EventArgs e)
+        private void StaffForm_Load(object sender, EventArgs e)
         {
-            PjesemarresiBLL.SelectPm(dgvReaders,3);
-          
+            PjesemarresiBLL.SelectPm(dgvStaff,2);
+
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
             btnShto.Enabled = false;
@@ -43,10 +43,14 @@ namespace Bibloteka
             btnShto.Enabled = false;
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
         private void btnShto_Click(object sender, EventArgs e)
         {
-
-            Pjesemarresit pm = new Pjesemarresit(0, 3, txtEmri.Text, txtMbiemri.Text, txtNrTel.Text, txtEmail.Text, txtNofka.Text, txtFjalekalimi.Text);
+            Pjesemarresit pm = new Pjesemarresit(0, 2, txtEmri.Text, txtMbiemri.Text, txtNrTel.Text, txtEmail.Text, txtNofka.Text, txtFjalekalimi.Text);
             pm.DataRegjistrimit = dtpDateRregj.Value;
 
             try
@@ -59,31 +63,23 @@ namespace Bibloteka
                 MessageBox.Show("Unsuccesful Insert\n" + ex.Message);
                 throw;
             }
-            PjesemarresiBLL.SelectPm(dgvReaders,3);
+            PjesemarresiBLL.SelectPm(dgvStaff,2);
             Clear();
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
-        private void dgvReaders_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvStaff_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int rowIndex = e.RowIndex;
-            txtID.Text = dgvReaders.Rows[rowIndex].Cells[0].Value.ToString();
+            txtID.Text = dgvStaff.Rows[rowIndex].Cells[0].Value.ToString();
             //  txtEmri.Text = dgvBooks.Rows[rowIndex].Cells[1].Value.ToString();
-            txtEmri.Text = dgvReaders.Rows[rowIndex].Cells[2].Value.ToString();
-            txtMbiemri.Text = dgvReaders.Rows[rowIndex].Cells[3].Value.ToString();
-            txtNrTel.Text = dgvReaders.Rows[rowIndex].Cells[4].Value.ToString();
-            txtEmail.Text = dgvReaders.Rows[rowIndex].Cells[5].Value.ToString();
-            dtpDateRregj.Value = Convert.ToDateTime(dgvReaders.Rows[rowIndex].Cells[8].Value.ToString());
-            txtNofka.Text = dgvReaders.Rows[rowIndex].Cells[6].Value.ToString();
-            txtFjalekalimi.Text = dgvReaders.Rows[rowIndex].Cells[7].Value.ToString();
-
-
-
-
+            txtEmri.Text = dgvStaff.Rows[rowIndex].Cells[2].Value.ToString();
+            txtMbiemri.Text = dgvStaff.Rows[rowIndex].Cells[3].Value.ToString();
+            txtNrTel.Text = dgvStaff.Rows[rowIndex].Cells[4].Value.ToString();
+            txtEmail.Text = dgvStaff.Rows[rowIndex].Cells[5].Value.ToString();
+            dtpDateRregj.Value = Convert.ToDateTime(dgvStaff.Rows[rowIndex].Cells[8].Value.ToString());
+            txtNofka.Text = dgvStaff.Rows[rowIndex].Cells[6].Value.ToString();
+            txtFjalekalimi.Text = dgvStaff.Rows[rowIndex].Cells[7].Value.ToString();
+            
             btnDelete.Enabled = true;
             btnEdit.Enabled = true;
             btnShto.Enabled = false;
@@ -91,8 +87,8 @@ namespace Bibloteka
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            Pjesemarresit pm = new Pjesemarresit(int.Parse(txtID.Text), 3, txtEmri.Text,
-                txtMbiemri.Text, txtNrTel.Text, txtEmail.Text, txtNofka.Text, txtFjalekalimi.Text);
+            Pjesemarresit pm = new Pjesemarresit(int.Parse(txtID.Text), 2, txtEmri.Text,
+              txtMbiemri.Text, txtNrTel.Text, txtEmail.Text, txtNofka.Text, txtFjalekalimi.Text);
 
             pm.DataRegjistrimit = dtpDateRregj.Value;
 
@@ -101,7 +97,7 @@ namespace Bibloteka
             {
                 MessageBox.Show("Updated Succesfuly");
                 Clear();
-                PjesemarresiBLL.SelectPm(dgvReaders,3);
+                PjesemarresiBLL.SelectPm(dgvStaff,2);
             }
             else
             {
@@ -118,18 +114,18 @@ namespace Bibloteka
         {
             string search = txtSearch.Text;
 
-            PjesemarresiBLL.SearchPm(dgvReaders, search);
+            PjesemarresiBLL.SearchPm(dgvStaff, search);
 
             if (search == "")
             {
-                PjesemarresiBLL.SelectPm(dgvReaders,3);
+                PjesemarresiBLL.SelectPm(dgvStaff,2);
             }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int PmID = int.Parse(txtID.Text);
-            
+
             if (PjesemarresiBLL.Delete(PmID))
             {
                 MessageBox.Show("Delete sucessfully");
@@ -140,7 +136,7 @@ namespace Bibloteka
                 MessageBox.Show("Delete failed");
             }
 
-            PjesemarresiBLL.SelectPm(dgvReaders,3);
+            PjesemarresiBLL.SelectPm(dgvStaff,2);
         }
     }
 }

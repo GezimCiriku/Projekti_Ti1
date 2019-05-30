@@ -91,6 +91,12 @@
     <Compile Include="ReadersForm.Designer.cs">
       <DependentUpon>ReadersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BooksForm.resx">
       <DependentUpon>BooksForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="ReadersForm.resx">
       <DependentUpon>ReadersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\Bibloteka.BO.Kategoria.datasource" />
     <None Include="Properties\DataSources\Bibloteka.BO.Libri.datasource" />

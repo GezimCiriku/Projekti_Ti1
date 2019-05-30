@@ -31,10 +31,10 @@ namespace Bibloteka.BLL
             return PjesemarresiDAL.Insert(pm);
         }
 
-        public static void SelectPm(DataGridView dg)
+        public static void SelectPm(DataGridView dg,int roliID)
         {
             dg.DataSource = null;
-            dg.DataSource = PjesemarresiDAL.GetPm();
+            dg.DataSource = PjesemarresiDAL.GetPm(roliID);
             dg.Columns[1].Visible = false;
         }
 

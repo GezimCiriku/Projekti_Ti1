@@ -104,7 +104,7 @@ namespace Bibloteka.DAL
             }
         }
 
-        public static List<Pjesemarresit> GetPm()
+        public static List<Pjesemarresit> GetPm(int RoliID)
         {
             List<Pjesemarresit> listaPm = new List<Pjesemarresit>();
             SqlConnection conn = DBHelper.GetConnection();
@@ -112,12 +112,16 @@ namespace Bibloteka.DAL
             try
             {
                 string cmdText = "usp_GetPm";
-                SqlCommand SelectBooksCmd = new SqlCommand(cmdText, conn);
-                SelectBooksCmd.CommandType = CommandType.StoredProcedure;
+                SqlCommand SelectPm = new SqlCommand(cmdText, conn);
+                SelectPm.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter sqlPrm = SelectPm.Parameters.Add("@RoliID", SqlDbType.Int);
+                sqlPrm.Direction = ParameterDirection.Input;
+                sqlPrm.Value = RoliID;
 
                 conn.Open();
 
-                SqlDataReader reader = SelectBooksCmd.ExecuteReader();
+                SqlDataReader reader = SelectPm.ExecuteReader();
 
                 while (reader.Read())
                 {
