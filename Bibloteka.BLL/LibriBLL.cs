@@ -32,5 +32,10 @@ namespace Bibloteka.BLL
             return LibriDAL.DeleteLibri(libriID,autoriID);
         }
 
+        public static void SearchBooks(DataGridView dg, string search)
+        {
+            dg.DataSource = null;
+            dg.DataSource = LibriDAL.SearchBooks(search);
+        }
     }
 }

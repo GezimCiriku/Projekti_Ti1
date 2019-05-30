@@ -111,6 +111,7 @@ namespace Bibloteka
 
             btnDelete.Enabled = true;
             btnEdit.Enabled = true;
+            btnShto.Enabled = false;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -160,14 +161,23 @@ namespace Bibloteka
             LibriBLL.SelectBooks(dgvBooks);
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
+        
 
         private void txtLibriID_TextChanged(object sender, EventArgs e)
         {
             btnShto.Enabled = true;
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            string search = txtSearch.Text;
+
+            LibriBLL.SearchBooks(dgvBooks, search);
+
+            if (search=="")
+            {
+                LibriBLL.SelectBooks(dgvBooks);
+            }
         }
     }
 }

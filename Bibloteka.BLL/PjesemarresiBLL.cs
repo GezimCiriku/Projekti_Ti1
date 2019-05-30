@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using Bibloteka.BO;
 using Bibloteka.DAL;
 
 namespace Bibloteka.BLL
@@ -11,7 +13,7 @@ namespace Bibloteka.BLL
     {
         public static bool CheckLogin(string username, string password)
         {
-            if (PjesemarresiDAL.ValidateLogin(username,password))
+            if (PjesemarresiDAL.ValidateLogin(username, password))
             {
                 AuthenticatedUser.Username = username;
                 AuthenticatedUser.Role = RoliDal.GetRoleID(username, password);
@@ -24,6 +26,15 @@ namespace Bibloteka.BLL
             }
         }
 
-       
+        public static int ShtoLexues(Pjesemarresit pm)
+        {
+            return PjesemarresiDAL.Insert(pm);
+        }
+
+        public static void SelectPm(DataGridView dg)
+        {
+            dg.DataSource = null;
+            dg.DataSource = PjesemarresiDAL.GetPm();
+        }
     }
 }

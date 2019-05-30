@@ -195,9 +195,62 @@ namespace Bibloteka.DAL
             }
         }
 
-        //public static List<Libri_Autori> SearchBooks(string search)
-        //{
-          
-        //}
+        public static List<Libri_Autori> SearchBooks(string search)
+        {
+            List<Libri_Autori> listaLibrave = new List<Libri_Autori>();
+            SqlConnection conn = DBHelper.GetConnection();
+
+            try
+            {
+                string cmdText = "usp_SearchBooks";
+                SqlCommand SearchBooksCmd = new SqlCommand(cmdText, conn);
+                SearchBooksCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter sqlPrm = SearchBooksCmd.Parameters.Add("@search", SqlDbType.VarChar);
+                sqlPrm.Direction = ParameterDirection.Input;
+                sqlPrm.Value = search;
+
+                conn.Open();
+
+                SqlDataReader reader = SearchBooksCmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Kategoria objK = new Kategoria();
+                    objK.Pershkrimi = reader["Kategoria"].ToString();
+
+                    Libri objL = new Libri();
+                    objL.LibriID = int.Parse(reader["LibriID"].ToString());
+                    objL.Titulli = reader["Titulli"].ToString();
+                    objL.ISBN = reader["ISBN"].ToString();
+                    objL.ShtepiaBotuese = reader["ShtepiaBotuese"].ToString();
+                    objL.Gjuha = reader["Gjuha"].ToString();
+                    objL.Kategoria = objK;
+                    objL.VitiBotimit = int.Parse(reader["VitiBotimit"].ToString());
+                    objL.NrKopjeve = int.Parse(reader["NrKopjeve"].ToString());
+
+                    Autori objA = new Autori();
+                    string[] autor = reader["Autori"].ToString().Split(' ');
+                    objA.AutoriID = int.Parse(reader["AutoriID"].ToString());
+                    objA.Emri = autor[0];
+                    objA.Mbiemri = autor[1];
+
+                    Libri_Autori objLA = new Libri_Autori(objL, objA);
+
+                    listaLibrave.Add(objLA);
+                }
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+            finally
+            {
+                DBHelper.CloseConnection(conn);
+            }
+
+            return listaLibrave;
+
+        }
     }
 }

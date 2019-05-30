@@ -19,12 +19,14 @@ namespace Bibloteka
         }
 
         BooksForm bf = new BooksForm();
+        ReadersForm rf = new ReadersForm();
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             home_Control1.Visible = true;
             SidePanel.Top = btnHome.Top;
-            bf.Hide();  
+            bf.Hide();
+            rf.Hide();
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
@@ -33,6 +35,7 @@ namespace Bibloteka
             SidePanel.Top = btnBooks.Top;    
             bf.Show();
             bf.Focus();
+            rf.Hide();
         }
         
         private void btnReaders_Click(object sender, EventArgs e)
@@ -40,6 +43,8 @@ namespace Bibloteka
             home_Control1.Visible = false;
             SidePanel.Top = btnReaders.Top;
             bf.Hide();
+            rf.Show();
+            rf.Focus();
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
@@ -47,6 +52,7 @@ namespace Bibloteka
             home_Control1.Visible = false;
             SidePanel.Top = btnStaff.Top;
             bf.Hide();
+            rf.Hide();
         }
 
         private void btnLocations_Click(object sender, EventArgs e)
@@ -54,6 +60,7 @@ namespace Bibloteka
             home_Control1.Visible = false;
             SidePanel.Top = btnLocations.Top;
             bf.Hide();
+            rf.Hide();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -72,6 +79,7 @@ namespace Bibloteka
             home_Control1.Visible = false;
             SidePanel.Top = btnViewProfile.Top;
             bf.Hide();
+            rf.Hide();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
@@ -83,6 +91,7 @@ namespace Bibloteka
         {
             this.Close();
             bf.Close();
+            rf.Close();
         }
 
         private void btnLoans_Click(object sender, EventArgs e)
@@ -90,6 +99,7 @@ namespace Bibloteka
             home_Control1.Visible = false;
             SidePanel.Top = btnLoans.Top;
             bf.Hide();
+            rf.Hide();
         }
   
     }

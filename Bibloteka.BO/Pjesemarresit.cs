@@ -18,6 +18,14 @@ namespace Bibloteka.BO
         public string Username { get; set; }
         public string Password { get; set; }
 
+        private DateTime dataRegjistrimit;
+
+        public DateTime DataRegjistrimit
+        {
+            get { return dataRegjistrimit.Date; }
+            set { dataRegjistrimit = value; }
+        }
+
         public Pjesemarresit()
         {
         }

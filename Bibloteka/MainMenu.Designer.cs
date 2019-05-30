@@ -388,7 +388,7 @@
             // btnCloseMainMenu
             // 
             this.btnCloseMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseMainMenu.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCloseMainMenu.BackColor = System.Drawing.Color.Transparent;
             this.btnCloseMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseMainMenu.Image")));
             this.btnCloseMainMenu.ImageActive = null;
             this.btnCloseMainMenu.Location = new System.Drawing.Point(1050, 0);
