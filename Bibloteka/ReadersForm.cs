@@ -22,8 +22,7 @@ namespace Bibloteka
         private void ReadersForm_Load(object sender, EventArgs e)
         {
             PjesemarresiBLL.SelectPm(dgvReaders);
-            dgvReaders.Columns[1].Visible = false;
-
+          
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
             btnShto.Enabled = false;
@@ -38,7 +37,7 @@ namespace Bibloteka
             txtEmail.Text = "";
             txtFjalekalimi.Text = "";
             txtNofka.Text = "";
-           
+
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
             btnShto.Enabled = false;
@@ -78,16 +77,70 @@ namespace Bibloteka
             txtMbiemri.Text = dgvReaders.Rows[rowIndex].Cells[3].Value.ToString();
             txtNrTel.Text = dgvReaders.Rows[rowIndex].Cells[4].Value.ToString();
             txtEmail.Text = dgvReaders.Rows[rowIndex].Cells[5].Value.ToString();
-            dtpDateRregj.Value =Convert.ToDateTime(dgvReaders.Rows[rowIndex].Cells[8].Value.ToString());
+            dtpDateRregj.Value = Convert.ToDateTime(dgvReaders.Rows[rowIndex].Cells[8].Value.ToString());
             txtNofka.Text = dgvReaders.Rows[rowIndex].Cells[6].Value.ToString();
             txtFjalekalimi.Text = dgvReaders.Rows[rowIndex].Cells[7].Value.ToString();
-         
+
 
 
 
             btnDelete.Enabled = true;
             btnEdit.Enabled = true;
             btnShto.Enabled = false;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Pjesemarresit pm = new Pjesemarresit(int.Parse(txtID.Text), 3, txtEmri.Text,
+                txtMbiemri.Text, txtNrTel.Text, txtEmail.Text, txtNofka.Text, txtFjalekalimi.Text);
+
+            pm.DataRegjistrimit = dtpDateRregj.Value;
+
+
+            if (PjesemarresiBLL.Edit(pm))
+            {
+                MessageBox.Show("Updated Succesfuly");
+                Clear();
+                PjesemarresiBLL.SelectPm(dgvReaders);
+            }
+            else
+            {
+                MessageBox.Show("Updated Failed");
+            }
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+            btnShto.Enabled = true;
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            string search = txtSearch.Text;
+
+            PjesemarresiBLL.SearchPm(dgvReaders, search);
+
+            if (search == "")
+            {
+                PjesemarresiBLL.SelectPm(dgvReaders);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int PmID = int.Parse(txtID.Text);
+            
+            if (PjesemarresiBLL.Delete(PmID))
+            {
+                MessageBox.Show("Delete sucessfully");
+                Clear();
+            }
+            else
+            {
+                MessageBox.Show("Delete failed");
+            }
+
+            PjesemarresiBLL.SelectPm(dgvReaders);
         }
     }
 }

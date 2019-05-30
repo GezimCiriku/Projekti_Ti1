@@ -160,9 +160,7 @@ namespace Bibloteka
 
             LibriBLL.SelectBooks(dgvBooks);
         }
-
-        
-
+  
         private void txtLibriID_TextChanged(object sender, EventArgs e)
         {
             btnShto.Enabled = true;

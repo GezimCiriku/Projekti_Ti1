@@ -35,6 +35,25 @@ namespace Bibloteka.BLL
         {
             dg.DataSource = null;
             dg.DataSource = PjesemarresiDAL.GetPm();
+            dg.Columns[1].Visible = false;
+        }
+
+        public static bool Edit(Pjesemarresit pm)
+        {
+            return PjesemarresiDAL.UpdatePm(pm);
+
+        }
+
+        public static void SearchPm(DataGridView dg, string search)
+        {
+            dg.DataSource = null;
+            dg.DataSource = PjesemarresiDAL.SearchPm(search);
+            dg.Columns[1].Visible = false;
+        }
+
+        public static bool Delete(int PmID)
+        {
+            return PjesemarresiDAL.DeletePm(PmID);
         }
     }
 }

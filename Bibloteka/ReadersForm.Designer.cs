@@ -73,6 +73,7 @@
             this.txtFjalekalimi.Name = "txtFjalekalimi";
             this.txtFjalekalimi.Size = new System.Drawing.Size(236, 26);
             this.txtFjalekalimi.TabIndex = 48;
+            this.txtFjalekalimi.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // btnClear
             // 
@@ -107,6 +108,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(236, 28);
             this.txtEmail.TabIndex = 45;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtNrTel
             // 
@@ -115,6 +117,7 @@
             this.txtNrTel.Name = "txtNrTel";
             this.txtNrTel.Size = new System.Drawing.Size(236, 28);
             this.txtNrTel.TabIndex = 44;
+            this.txtNrTel.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtMbiemri
             // 
@@ -123,6 +126,7 @@
             this.txtMbiemri.Name = "txtMbiemri";
             this.txtMbiemri.Size = new System.Drawing.Size(236, 28);
             this.txtMbiemri.TabIndex = 43;
+            this.txtMbiemri.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtEmri
             // 
@@ -131,6 +135,7 @@
             this.txtEmri.Name = "txtEmri";
             this.txtEmri.Size = new System.Drawing.Size(236, 28);
             this.txtEmri.TabIndex = 42;
+            this.txtEmri.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // lblFjalekalimi
             // 
@@ -209,6 +214,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(593, 28);
             this.txtSearch.TabIndex = 57;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // lblSearch
             // 
@@ -257,6 +263,7 @@
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Textcolor = System.Drawing.Color.White;
             this.btnDelete.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -294,6 +301,7 @@
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Textcolor = System.Drawing.Color.White;
             this.btnEdit.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnShto
             // 
@@ -359,6 +367,7 @@
             this.txtNofka.Name = "txtNofka";
             this.txtNofka.Size = new System.Drawing.Size(236, 28);
             this.txtNofka.TabIndex = 45;
+            this.txtNofka.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // lblID
             // 
@@ -378,6 +387,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(236, 28);
             this.txtID.TabIndex = 42;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // ReadersForm
             // 
