@@ -15,8 +15,9 @@ namespace Bibloteka.BLL
         {
             if (PjesemarresiDAL.ValidateLogin(username, password))
             {
-                AuthenticatedUser.Username = username;
-                AuthenticatedUser.Role = RoliDal.GetRoleID(username, password);
+                AuthenticateddUser.Username = username;
+                AuthenticateddUser.Role = RoliDal.GetRoleID(username, password);
+                AuthenticateddUser.PmID = PjesemarresiDAL.GetPmID(username, password);
 
                 return true;
             }
@@ -54,6 +55,11 @@ namespace Bibloteka.BLL
         public static bool Delete(int PmID)
         {
             return PjesemarresiDAL.DeletePm(PmID);
+        }
+
+        public static Pjesemarresit GetPm()
+        {
+            return PjesemarresiDAL.GetPmByID();
         }
     }
 }

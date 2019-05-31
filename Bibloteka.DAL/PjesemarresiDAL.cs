@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using Bibloteka.BO;
 
 
+
 namespace Bibloteka.DAL
 {
     public class PjesemarresiDAL
@@ -238,7 +239,7 @@ namespace Bibloteka.DAL
                 while (reader.Read())
                 {
                     Pjesemarresit objPm = new Pjesemarresit();
-                    objPm.PmID = int.Parse(reader["PmID"].ToString());                  
+                    objPm.PmID = int.Parse(reader["PmID"].ToString());
                     objPm.Emri = reader["Emri"].ToString();
                     objPm.Mbiemri = reader["Mbiemri"].ToString();
                     objPm.NrTel = reader["NrTel"].ToString();
@@ -283,6 +284,78 @@ namespace Bibloteka.DAL
             catch (Exception)
             {
                 throw;
+            }
+        }
+
+        public static Pjesemarresit GetPmByID()
+        {
+            Pjesemarresit pm = new Pjesemarresit();
+            SqlConnection conn = DBHelper.GetConnection();
+
+            try
+            {
+                string cmdText = "usp_GetPmByID";
+                SqlCommand SelectPm = new SqlCommand(cmdText, conn);
+                SelectPm.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter sqlPrm = SelectPm.Parameters.Add("@PmID", SqlDbType.Int);
+                sqlPrm.Direction = ParameterDirection.Input;
+                sqlPrm.Value = AuthenticateddUser.PmID;
+
+               
+
+                conn.Open();
+
+                SqlDataReader reader = SelectPm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Pjesemarresit objPm = new Pjesemarresit();
+                    objPm.PmID = int.Parse(reader["PmID"].ToString());
+                    objPm.Emri = reader["Emri"].ToString();
+                    objPm.Mbiemri = reader["Mbiemri"].ToString();
+                    objPm.NrTel = reader["NrTel"].ToString();
+                    objPm.Email = reader["Email"].ToString();
+
+                    objPm.DataRegjistrimit = Convert.ToDateTime(reader["DataRregjistrimit"].ToString());
+                    objPm.Username = reader["Username"].ToString();
+                    objPm.Password = reader["Passwordi"].ToString();
+
+                    pm = objPm;
+                }
+
+                return pm;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static int GetPmID(string username, string password)
+        {
+            SqlConnection conn = DBHelper.GetConnection();
+            try
+            {
+                string cmdText = "usp_GetPmID";
+
+                SqlCommand GetPmID = new SqlCommand(cmdText, conn);
+                GetPmID.CommandType = CommandType.StoredProcedure;
+
+                GetPmID.Parameters.AddWithValue("@Username", username);
+                GetPmID.Parameters.AddWithValue("@Password", password);
+
+                conn.Open();
+                int result = (int)GetPmID.ExecuteScalar();
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                DBHelper.CloseConnection(conn);
             }
         }
     }

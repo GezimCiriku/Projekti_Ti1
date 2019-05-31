@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anetaresimi.cs" />
+    <Compile Include="AuthenticateddUser.cs" />
     <Compile Include="Autori.cs" />
     <Compile Include="BaseObject.cs" />
     <Compile Include="Departamenti.cs" />

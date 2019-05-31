@@ -22,54 +22,66 @@ namespace Bibloteka
         ReadersForm rf = new ReadersForm();
         StaffForm sf = new StaffForm();
         HomeForm hf = new HomeForm();
+        MyProfile mp = new MyProfile();
        
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            hf.Show();
+            
             SidePanel.Top = btnHome.Top;
             bf.Hide();
             rf.Hide();
             sf.Hide();
+            hf.Show();
+            hf.Focus();
+            mp.Hide();
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
-            hf.Hide();
+          
             SidePanel.Top = btnBooks.Top;    
             bf.Show();
             bf.Focus();
             rf.Hide();
             sf.Hide();
+            hf.Hide();
+            mp.Hide();
         }
         
         private void btnReaders_Click(object sender, EventArgs e)
         {
-            hf.Hide();
+            
             SidePanel.Top = btnReaders.Top;
             bf.Hide();
             rf.Show();
             rf.Focus();
             sf.Hide();
+            hf.Hide();
+            mp.Hide();
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-            hf.Hide();
+           
             SidePanel.Top = btnStaff.Top;
             bf.Hide();
             rf.Hide();
             sf.Show();
             sf.Focus();
+            hf.Hide();
+            mp.Hide();
         }
 
         private void btnLocations_Click(object sender, EventArgs e)
         {
-            hf.Hide();
+           
             SidePanel.Top = btnLocations.Top;
             bf.Hide();
             rf.Hide();
             sf.Hide();
+            hf.Hide();
+            mp.Hide();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -87,11 +99,14 @@ namespace Bibloteka
 
         private void btnViewProfile_Click(object sender, EventArgs e)
         {
-            hf.Hide();
+            
             SidePanel.Top = btnViewProfile.Top;
             bf.Hide();
             rf.Hide();
             sf.Hide();
+            hf.Hide();
+            mp.Show();
+            mp.Focus();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
@@ -105,6 +120,8 @@ namespace Bibloteka
             bf.Close();
             rf.Close();
             sf.Close();
+            hf.Close();
+            mp.Close();
         }
 
         private void btnLoans_Click(object sender, EventArgs e)
@@ -114,6 +131,7 @@ namespace Bibloteka
             bf.Hide();
             rf.Hide();
             sf.Hide();
+            mp.Hide();
         }
   
     }

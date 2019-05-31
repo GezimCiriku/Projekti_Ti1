@@ -138,7 +138,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(27, 29);
             this.label9.TabIndex = 0;
-            this.label9.Text = "1";
+            this.label9.Text = "2";
             // 
             // panel5
             // 
@@ -181,7 +181,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(27, 29);
             this.label7.TabIndex = 0;
-            this.label7.Text = "1";
+            this.label7.Text = "8";
             // 
             // lblMembers
             // 
@@ -233,9 +233,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 29);
+            this.label5.Size = new System.Drawing.Size(41, 29);
             this.label5.TabIndex = 0;
-            this.label5.Text = "1";
+            this.label5.Text = "10";
             // 
             // panBooks
             // 
@@ -334,7 +334,7 @@
             this.lblIssuedBooks.Name = "lblIssuedBooks";
             this.lblIssuedBooks.Size = new System.Drawing.Size(27, 29);
             this.lblIssuedBooks.TabIndex = 0;
-            this.lblIssuedBooks.Text = "1";
+            this.lblIssuedBooks.Text = "5";
             // 
             // panel1
             // 
@@ -403,6 +403,7 @@
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "HomeForm";
+            this.Load += new System.EventHandler(this.HomeForm_Load);
             this.panMembers.ResumeLayout(false);
             this.panMembers.PerformLayout();
             this.panel6.ResumeLayout(false);
