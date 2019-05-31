@@ -32,7 +32,6 @@
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.btnLogOut = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnLocations = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLoans = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnStaff = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnReaders = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -59,7 +58,6 @@
             this.bunifuGradientPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuGradientPanel1.Controls.Add(this.SidePanel);
             this.bunifuGradientPanel1.Controls.Add(this.btnLogOut);
-            this.bunifuGradientPanel1.Controls.Add(this.btnLocations);
             this.bunifuGradientPanel1.Controls.Add(this.btnLoans);
             this.bunifuGradientPanel1.Controls.Add(this.btnStaff);
             this.bunifuGradientPanel1.Controls.Add(this.btnReaders);
@@ -121,42 +119,6 @@
             this.btnLogOut.Textcolor = System.Drawing.Color.White;
             this.btnLogOut.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnLocations
-            // 
-            this.btnLocations.Activecolor = System.Drawing.Color.MediumBlue;
-            this.btnLocations.BackColor = System.Drawing.Color.Transparent;
-            this.btnLocations.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLocations.BorderRadius = 0;
-            this.btnLocations.ButtonText = "                  Lokacionet";
-            this.btnLocations.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLocations.DisabledColor = System.Drawing.Color.Gray;
-            this.btnLocations.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLocations.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLocations.Iconimage")));
-            this.btnLocations.Iconimage_right = null;
-            this.btnLocations.Iconimage_right_Selected = null;
-            this.btnLocations.Iconimage_Selected = null;
-            this.btnLocations.IconMarginLeft = 0;
-            this.btnLocations.IconMarginRight = 0;
-            this.btnLocations.IconRightVisible = true;
-            this.btnLocations.IconRightZoom = 0D;
-            this.btnLocations.IconVisible = true;
-            this.btnLocations.IconZoom = 50D;
-            this.btnLocations.IsTab = false;
-            this.btnLocations.Location = new System.Drawing.Point(13, 558);
-            this.btnLocations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnLocations.Name = "btnLocations";
-            this.btnLocations.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnLocations.OnHovercolor = System.Drawing.Color.DarkBlue;
-            this.btnLocations.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnLocations.selected = false;
-            this.btnLocations.Size = new System.Drawing.Size(313, 59);
-            this.btnLocations.TabIndex = 5;
-            this.btnLocations.Text = "                  Lokacionet";
-            this.btnLocations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLocations.Textcolor = System.Drawing.Color.White;
-            this.btnLocations.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLocations.Click += new System.EventHandler(this.btnLocations_Click);
             // 
             // btnLoans
             // 
@@ -462,7 +424,6 @@
         private System.Windows.Forms.Label lblBibloteka;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuFlatButton btnHome;
-        private Bunifu.Framework.UI.BunifuFlatButton btnLocations;
         private Bunifu.Framework.UI.BunifuFlatButton btnStaff;
         private Bunifu.Framework.UI.BunifuFlatButton btnReaders;
         private Bunifu.Framework.UI.BunifuFlatButton btnBooks;

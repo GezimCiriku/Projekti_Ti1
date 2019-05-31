@@ -58,6 +58,7 @@
             this.txtSearchBook.Name = "txtSearchBook";
             this.txtSearchBook.Size = new System.Drawing.Size(547, 28);
             this.txtSearchBook.TabIndex = 73;
+            this.txtSearchBook.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearchBook_KeyUp);
             // 
             // dgvReaders
             // 
@@ -86,6 +87,7 @@
             this.txtSearchReaders.Name = "txtSearchReaders";
             this.txtSearchReaders.Size = new System.Drawing.Size(547, 28);
             this.txtSearchReaders.TabIndex = 74;
+            this.txtSearchReaders.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearchReaders_KeyUp);
             // 
             // label3
             // 
@@ -150,6 +152,7 @@
             this.Name = "Issue_ReturnForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Issue_ReturnForm";
+            this.Load += new System.EventHandler(this.Issue_ReturnForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReaders)).EndInit();
             this.ResumeLayout(false);

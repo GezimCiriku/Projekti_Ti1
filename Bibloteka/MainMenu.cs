@@ -78,17 +78,6 @@ namespace Bibloteka
             lf.Hide();
         }
 
-        private void btnLocations_Click(object sender, EventArgs e)
-        {
-           
-            SidePanel.Top = btnLocations.Top;
-            bf.Hide();
-            rf.Hide();
-            sf.Hide();
-            hf.Hide();
-            mp.Hide();
-            lf.Hide();
-        }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
