@@ -21,10 +21,12 @@ namespace Bibloteka
         BooksForm bf = new BooksForm();
         ReadersForm rf = new ReadersForm();
         StaffForm sf = new StaffForm();
+        HomeForm hf = new HomeForm();
+       
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            home_Control1.Visible = true;
+            hf.Show();
             SidePanel.Top = btnHome.Top;
             bf.Hide();
             rf.Hide();
@@ -33,7 +35,7 @@ namespace Bibloteka
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
-            home_Control1.Visible = false;
+            hf.Hide();
             SidePanel.Top = btnBooks.Top;    
             bf.Show();
             bf.Focus();
@@ -43,7 +45,7 @@ namespace Bibloteka
         
         private void btnReaders_Click(object sender, EventArgs e)
         {
-            home_Control1.Visible = false;
+            hf.Hide();
             SidePanel.Top = btnReaders.Top;
             bf.Hide();
             rf.Show();
@@ -53,18 +55,17 @@ namespace Bibloteka
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-            home_Control1.Visible = false;
+            hf.Hide();
             SidePanel.Top = btnStaff.Top;
             bf.Hide();
             rf.Hide();
             sf.Show();
             sf.Focus();
-
         }
 
         private void btnLocations_Click(object sender, EventArgs e)
         {
-            home_Control1.Visible = false;
+            hf.Hide();
             SidePanel.Top = btnLocations.Top;
             bf.Hide();
             rf.Hide();
@@ -86,7 +87,7 @@ namespace Bibloteka
 
         private void btnViewProfile_Click(object sender, EventArgs e)
         {
-            home_Control1.Visible = false;
+            hf.Hide();
             SidePanel.Top = btnViewProfile.Top;
             bf.Hide();
             rf.Hide();
@@ -95,7 +96,7 @@ namespace Bibloteka
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-         
+           
         }
 
         private void btnCloseMainMenu_Click(object sender, EventArgs e)
@@ -108,7 +109,7 @@ namespace Bibloteka
 
         private void btnLoans_Click(object sender, EventArgs e)
         {
-            home_Control1.Visible = false;
+            hf.Hide();
             SidePanel.Top = btnLoans.Top;
             bf.Hide();
             rf.Hide();

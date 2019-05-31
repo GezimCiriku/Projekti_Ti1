@@ -212,7 +212,7 @@ namespace Bibloteka.DAL
             }
         }
 
-        public static List<Pjesemarresit> SearchPm(string search)
+        public static List<Pjesemarresit> SearchPm(string search, int RoliID)
         {
             List<Pjesemarresit> listaPm = new List<Pjesemarresit>();
             SqlConnection conn = DBHelper.GetConnection();
@@ -223,7 +223,11 @@ namespace Bibloteka.DAL
                 SqlCommand SearchPm = new SqlCommand(cmdText, conn);
                 SearchPm.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter sqlPrm = SearchPm.Parameters.Add("@search", SqlDbType.VarChar);
+                SqlParameter sqlPrm = SearchPm.Parameters.Add("@RoliID", SqlDbType.Int);
+                sqlPrm.Direction = ParameterDirection.Input;
+                sqlPrm.Value = RoliID;
+
+                sqlPrm = SearchPm.Parameters.Add("@search", SqlDbType.VarChar);
                 sqlPrm.Direction = ParameterDirection.Input;
                 sqlPrm.Value = search;
 
@@ -234,7 +238,7 @@ namespace Bibloteka.DAL
                 while (reader.Read())
                 {
                     Pjesemarresit objPm = new Pjesemarresit();
-                    objPm.PmID = int.Parse(reader["PmID"].ToString());
+                    objPm.PmID = int.Parse(reader["PmID"].ToString());                  
                     objPm.Emri = reader["Emri"].ToString();
                     objPm.Mbiemri = reader["Mbiemri"].ToString();
                     objPm.NrTel = reader["NrTel"].ToString();

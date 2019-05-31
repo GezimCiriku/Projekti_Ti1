@@ -114,7 +114,7 @@ namespace Bibloteka
         {
             string search = txtSearch.Text;
 
-            PjesemarresiBLL.SearchPm(dgvStaff, search);
+            PjesemarresiBLL.SearchPm(dgvStaff, search,2);
 
             if (search == "")
             {

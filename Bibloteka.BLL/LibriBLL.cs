@@ -37,5 +37,10 @@ namespace Bibloteka.BLL
             dg.DataSource = null;
             dg.DataSource = LibriDAL.SearchBooks(search);
         }
+
+        public static int CountBooks()
+        {
+            return LibriDAL.CountBooks();
+        }
     }
 }

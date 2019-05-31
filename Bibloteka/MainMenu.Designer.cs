@@ -44,7 +44,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBibloteka = new System.Windows.Forms.Label();
-            this.home_Control1 = new Bibloteka.Home_Control();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseMainMenu)).BeginInit();
@@ -116,7 +115,7 @@
             this.btnLogOut.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOut.selected = false;
             this.btnLogOut.Size = new System.Drawing.Size(313, 59);
-            this.btnLogOut.TabIndex = 6;
+            this.btnLogOut.TabIndex = 7;
             this.btnLogOut.Text = "                  Shkyçu";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogOut.Textcolor = System.Drawing.Color.White;
@@ -152,7 +151,7 @@
             this.btnLocations.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLocations.selected = false;
             this.btnLocations.Size = new System.Drawing.Size(313, 59);
-            this.btnLocations.TabIndex = 4;
+            this.btnLocations.TabIndex = 5;
             this.btnLocations.Text = "                  Lokacionet";
             this.btnLocations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLocations.Textcolor = System.Drawing.Color.White;
@@ -224,7 +223,7 @@
             this.btnStaff.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStaff.selected = false;
             this.btnStaff.Size = new System.Drawing.Size(313, 59);
-            this.btnStaff.TabIndex = 3;
+            this.btnStaff.TabIndex = 4;
             this.btnStaff.Text = "                  Stafi";
             this.btnStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStaff.Textcolor = System.Drawing.Color.White;
@@ -332,7 +331,7 @@
             this.btnViewProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnViewProfile.selected = false;
             this.btnViewProfile.Size = new System.Drawing.Size(313, 59);
-            this.btnViewProfile.TabIndex = 5;
+            this.btnViewProfile.TabIndex = 6;
             this.btnViewProfile.Text = "                  Profili im";
             this.btnViewProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViewProfile.Textcolor = System.Drawing.Color.White;
@@ -429,20 +428,11 @@
             this.lblBibloteka.TabIndex = 3;
             this.lblBibloteka.Text = "Sistemi për menaxhimin e biblotekës";
             // 
-            // home_Control1
-            // 
-            this.home_Control1.BackColor = System.Drawing.Color.Transparent;
-            this.home_Control1.Location = new System.Drawing.Point(334, 193);
-            this.home_Control1.Name = "home_Control1";
-            this.home_Control1.Size = new System.Drawing.Size(1201, 617);
-            this.home_Control1.TabIndex = 4;
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 764);
-            this.Controls.Add(this.home_Control1);
             this.Controls.Add(this.lblBibloteka);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -481,7 +471,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnLogOut;
         private Bunifu.Framework.UI.BunifuFlatButton btnViewProfile;
         private Bunifu.Framework.UI.BunifuFlatButton btnLoans;
-        private Home_Control home_Control1;
        
     }
 }

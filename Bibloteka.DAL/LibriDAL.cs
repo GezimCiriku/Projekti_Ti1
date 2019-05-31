@@ -252,5 +252,32 @@ namespace Bibloteka.DAL
             return listaLibrave;
 
         }
+
+        public static int CountBooks()
+        {
+            SqlConnection conn = DBHelper.GetConnection();
+
+            try
+            {
+                string proc = "dbo.usp_CountBooks";
+
+                SqlCommand cmd = new SqlCommand(proc, conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlParameter sqlPrm = cmd.Parameters.Add("@number", SqlDbType.Int);
+                sqlPrm.Direction = ParameterDirection.Output;
+
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                int number = int.Parse(sqlPrm.Value.ToString());
+                return number;
+            }
+            catch (Exception)
+            {
+                throw;
+            }       
+        }
     }
 }

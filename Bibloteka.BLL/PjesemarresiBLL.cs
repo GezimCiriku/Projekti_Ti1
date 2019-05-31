@@ -44,10 +44,10 @@ namespace Bibloteka.BLL
 
         }
 
-        public static void SearchPm(DataGridView dg, string search)
+        public static void SearchPm(DataGridView dg, string search,int roliID)
         {
             dg.DataSource = null;
-            dg.DataSource = PjesemarresiDAL.SearchPm(search);
+            dg.DataSource = PjesemarresiDAL.SearchPm(search, roliID);
             dg.Columns[1].Visible = false;
         }
 
