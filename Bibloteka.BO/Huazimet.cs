@@ -10,6 +10,7 @@ namespace Bibloteka.BO
     {
         public int HuazimiID { get; set; }
         public int LibriID { get; set; }
+        public string PjesemarresiFullName { get; set; }
         public int KopjaID { get; set; }
         public int PmID { get; set; }
         public DateTime DataHuazimit { get; set; }
@@ -19,6 +20,6 @@ namespace Bibloteka.BO
         public string GjendjaLibritNeKthim { get; set; }
         public string Verejtje { get; set; }
         public decimal Gjoba { get; set; }
-        public char Huazim_Kthim { get; set; } //varesisht a kthen librin apo mer, kemi H ose K
+        public bool Huazim_Kthim { get; set; } // huazim = true
     }
 }

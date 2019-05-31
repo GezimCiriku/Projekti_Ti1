@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="AuthenticatedUser.cs" />
     <Compile Include="AutoriBLL.cs" />
+    <Compile Include="HuazimetBLL.cs" />
     <Compile Include="KategoriaBLL.cs" />
     <Compile Include="LibriBLL.cs" />
     <Compile Include="PjesemarresiBLL.cs" />

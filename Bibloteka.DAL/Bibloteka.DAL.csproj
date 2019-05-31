@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoriDAL.cs" />
+    <Compile Include="HuazimetDAL.cs" />
     <Compile Include="KategoriaDAL.cs" />
+    <Compile Include="KopjaDAL.cs" />
     <Compile Include="LibriDAL.cs" />
     <Compile Include="PjesemarresiDAL.cs" />
     <Compile Include="DBHelper.cs" />

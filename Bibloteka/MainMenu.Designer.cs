@@ -471,6 +471,5 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnLogOut;
         private Bunifu.Framework.UI.BunifuFlatButton btnViewProfile;
         private Bunifu.Framework.UI.BunifuFlatButton btnLoans;
-       
     }
 }

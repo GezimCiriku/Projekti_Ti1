@@ -71,6 +71,18 @@
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Issue-ReturnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Issue-ReturnForm.Designer.cs">
+      <DependentUpon>Issue-ReturnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoansForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoansForm.Designer.cs">
+      <DependentUpon>LoansForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Issue-ReturnForm.resx">
+      <DependentUpon>Issue-ReturnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoansForm.resx">
+      <DependentUpon>LoansForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
