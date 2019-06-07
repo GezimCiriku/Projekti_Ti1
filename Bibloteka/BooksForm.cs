@@ -31,6 +31,7 @@ namespace Bibloteka
             cmbKategoriaID.DataSource = dt;
             cmbKategoriaID.DisplayMember = dt.Columns[1].ColumnName;
             cmbKategoriaID.ValueMember = dt.Columns[0].ColumnName;
+            
 
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
@@ -88,7 +89,7 @@ namespace Bibloteka
                 MessageBox.Show("Unsuccesful Insert\n" + ex.Message);
                 throw;
             }
-            dgvBooks.DataSource = LibriDAL.GetBooks();
+            LibriBLL.SelectBooks(dgvBooks);
             Clear();
         }
 
@@ -176,6 +177,21 @@ namespace Bibloteka
             {
                 LibriBLL.SelectBooks(dgvBooks);
             }
+        }
+
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            AddCategoryForm acf = new AddCategoryForm();
+            acf.ShowDialog();      
+        }
+
+        private void cmbKategoriaID_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = KategoriaBLL.SelectKategories();
+            cmbKategoriaID.DataSource = dt;
+            cmbKategoriaID.DisplayMember = dt.Columns[1].ColumnName;
+            cmbKategoriaID.ValueMember = dt.Columns[0].ColumnName;
         }
     }
 }

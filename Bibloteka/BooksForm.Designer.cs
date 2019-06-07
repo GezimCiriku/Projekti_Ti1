@@ -88,6 +88,7 @@
             this.cmbKategoriaID.Name = "cmbKategoriaID";
             this.cmbKategoriaID.Size = new System.Drawing.Size(236, 28);
             this.cmbKategoriaID.TabIndex = 5;
+            this.cmbKategoriaID.Click += new System.EventHandler(this.cmbKategoriaID_Click);
             // 
             // btnClear
             // 
@@ -444,6 +445,7 @@
             this.btnAddCategory.Size = new System.Drawing.Size(46, 44);
             this.btnAddCategory.TabIndex = 41;
             this.btnAddCategory.UseVisualStyleBackColor = false;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // BooksForm
             // 

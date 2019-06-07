@@ -1,4 +1,5 @@
-﻿using Bibloteka.DAL;
+﻿using Bibloteka.BO;
+using Bibloteka.DAL;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,23 @@ namespace Bibloteka.BLL
         public static DataTable SelectKategories()
         {
             return KategoriaDAL.SelectKategories();
+        }
+
+        public static bool InsertCategory(Kategoria kat)
+        {
+            return KategoriaDAL.Insert(kat);
+        }
+
+        public static void SelectCategories(DataGridView dg)
+        {
+            dg.DataSource = null;
+            dg.DataSource = KategoriaDAL.GetCategories();
+        }
+
+
+        public static bool Delete(int KatID)
+        {
+            return KategoriaDAL.DeleteCategory(KatID);
         }
     }
 }

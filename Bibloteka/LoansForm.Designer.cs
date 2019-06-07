@@ -43,7 +43,7 @@
             this.dgvHuazimet.Location = new System.Drawing.Point(98, 138);
             this.dgvHuazimet.Name = "dgvHuazimet";
             this.dgvHuazimet.RowTemplate.Height = 24;
-            this.dgvHuazimet.Size = new System.Drawing.Size(1354, 398);
+            this.dgvHuazimet.Size = new System.Drawing.Size(1454, 398);
             this.dgvHuazimet.TabIndex = 72;
             // 
             // txtSearchReaders
@@ -51,7 +51,7 @@
             this.txtSearchReaders.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchReaders.Location = new System.Drawing.Point(186, 78);
             this.txtSearchReaders.Name = "txtSearchReaders";
-            this.txtSearchReaders.Size = new System.Drawing.Size(547, 28);
+            this.txtSearchReaders.Size = new System.Drawing.Size(615, 28);
             this.txtSearchReaders.TabIndex = 70;
             // 
             // lblSearch

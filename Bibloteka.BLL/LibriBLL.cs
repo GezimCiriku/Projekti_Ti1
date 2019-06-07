@@ -15,6 +15,8 @@ namespace Bibloteka.BLL
         {
             dg.DataSource = null;
             dg.DataSource = LibriDAL.GetBooks();
+            dg.Columns[0].Visible = false;
+            dg.Columns[8].Visible = false;
         }
 
         public static int InsertBook(Libri libri)
