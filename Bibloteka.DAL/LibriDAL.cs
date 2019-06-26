@@ -109,7 +109,7 @@ namespace Bibloteka.DAL
             }
         }
 
-        public static bool UpdateLibri(Libri libri)
+        public static bool UpdateLibri(Libri libri, Autori autori)
         {
             SqlConnection conn = DBHelper.GetConnection();
             string proc = "dbo.usp_UpdateLiber";
@@ -152,6 +152,18 @@ namespace Bibloteka.DAL
                 sqlPrm = cmd.Parameters.Add("@NrKopjeve", SqlDbType.Int);
                 sqlPrm.Direction = ParameterDirection.Input;
                 sqlPrm.Value = libri.NrKopjeve;
+
+                sqlPrm = cmd.Parameters.Add("@AutoriID", SqlDbType.Int);
+                sqlPrm.Direction = ParameterDirection.Input;
+                sqlPrm.Value = libri.AutoriID;
+
+                sqlPrm = cmd.Parameters.Add("@EmriAutorit", SqlDbType.VarChar);
+                sqlPrm.Direction = ParameterDirection.Input;
+                sqlPrm.Value = autori.Emri;
+
+                sqlPrm = cmd.Parameters.Add("@MbiemriAutorit", SqlDbType.VarChar);
+                sqlPrm.Direction = ParameterDirection.Input;
+                sqlPrm.Value = autori.Mbiemri;
 
                 cmd.ExecuteNonQuery();
                 return true;

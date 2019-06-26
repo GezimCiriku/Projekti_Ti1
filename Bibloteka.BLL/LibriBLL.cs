@@ -24,9 +24,9 @@ namespace Bibloteka.BLL
             return LibriDAL.Insert(libri);
         }
 
-        public static bool Edit(Libri libri)
+        public static bool Edit(Libri libri, Autori autori)
         {
-            return LibriDAL.UpdateLibri(libri);
+            return LibriDAL.UpdateLibri(libri,autori);
         }
 
         public static bool Delete(int libriID, int autoriID)

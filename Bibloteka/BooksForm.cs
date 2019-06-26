@@ -89,6 +89,16 @@ namespace Bibloteka
                 MessageBox.Show("Unsuccesful Insert\n" + ex.Message);
                 throw;
             }
+
+            while (objL.NrKopjeve!=0)
+            {
+                //shto kopje te librit 
+                Kopja kopja = new Kopja(0, objL.LibriID, "Ne rregull", true);
+                
+
+                objL.NrKopjeve--;
+            }
+
             LibriBLL.SelectBooks(dgvBooks);
             Clear();
         }
@@ -127,7 +137,12 @@ namespace Bibloteka
 
                 objL.AutoriID = int.Parse(txtAutoriId);
 
-                if (LibriBLL.Edit(objL))
+                Autori autor = new Autori();
+                autor.AutoriID = objL.AutoriID;
+                autor.Emri = txtEmriAutori.Text;
+                autor.Mbiemri = txtMbiemriAutori.Text;
+
+                if (LibriBLL.Edit(objL,autor))
                 {
                     MessageBox.Show("Updated Succesfuly");
                     Clear();
@@ -192,6 +207,11 @@ namespace Bibloteka
             cmbKategoriaID.DataSource = dt;
             cmbKategoriaID.DisplayMember = dt.Columns[1].ColumnName;
             cmbKategoriaID.ValueMember = dt.Columns[0].ColumnName;
+        }
+
+        private void dgvBooks_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
         }
     }
 }

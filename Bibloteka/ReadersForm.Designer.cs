@@ -62,7 +62,7 @@
             this.dgvReaders.Location = new System.Drawing.Point(513, 150);
             this.dgvReaders.Name = "dgvReaders";
             this.dgvReaders.RowTemplate.Height = 24;
-            this.dgvReaders.Size = new System.Drawing.Size(1044, 451);
+            this.dgvReaders.Size = new System.Drawing.Size(992, 451);
             this.dgvReaders.TabIndex = 69;
             this.dgvReaders.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvReaders_RowHeaderMouseClick);
             // 

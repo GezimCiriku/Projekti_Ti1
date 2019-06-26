@@ -37,6 +37,7 @@ namespace Bibloteka.BLL
             dg.DataSource = null;
             dg.DataSource = PjesemarresiDAL.GetPm(roliID);
             dg.Columns[1].Visible = false;
+            dg.Columns[0].Visible = false;
         }
 
         public static bool Edit(Pjesemarresit pm)

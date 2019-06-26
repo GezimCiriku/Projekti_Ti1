@@ -70,7 +70,7 @@
             this.dgvStaff.Location = new System.Drawing.Point(502, 127);
             this.dgvStaff.Name = "dgvStaff";
             this.dgvStaff.RowTemplate.Height = 24;
-            this.dgvStaff.Size = new System.Drawing.Size(1044, 451);
+            this.dgvStaff.Size = new System.Drawing.Size(990, 451);
             this.dgvStaff.TabIndex = 94;
             this.dgvStaff.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvStaff_RowHeaderMouseClick);
             // 

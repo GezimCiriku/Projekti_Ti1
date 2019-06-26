@@ -26,5 +26,13 @@ namespace Bibloteka.BO
             PozicioniID = pozicioniID;
             IsAvailable = isAvailable;
         }
+
+        public Kopja(int kopjaID, int libriID, string gjendjaKopjes, bool isAvailable)
+        {
+            KopjaID = kopjaID;
+            LibriID = libriID;
+            GjendjaKopjes = gjendjaKopjes;
+            IsAvailable = isAvailable;
+        }
     }
 }

@@ -58,6 +58,7 @@
             this.btnShto = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblInfo = new System.Windows.Forms.Label();
             this.btnAddCategory = new System.Windows.Forms.Button();
+            this.lblKopjet = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +71,7 @@
             this.dgvBooks.Size = new System.Drawing.Size(1044, 451);
             this.dgvBooks.TabIndex = 40;
             this.dgvBooks.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBooks_RowHeaderMouseClick);
+            this.dgvBooks.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBooks_RowHeaderMouseDoubleClick);
             // 
             // txtVitiBotimit
             // 
@@ -447,11 +449,22 @@
             this.btnAddCategory.UseVisualStyleBackColor = false;
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
+            // lblKopjet
+            // 
+            this.lblKopjet.AutoSize = true;
+            this.lblKopjet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKopjet.Location = new System.Drawing.Point(532, 581);
+            this.lblKopjet.Name = "lblKopjet";
+            this.lblKopjet.Size = new System.Drawing.Size(334, 20);
+            this.lblKopjet.TabIndex = 42;
+            this.lblKopjet.Text = "Kliko dy here mbi librin per ti shikuar kopjet ";
+            // 
             // BooksForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 806);
+            this.Controls.Add(this.lblKopjet);
             this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.dgvBooks);
             this.Controls.Add(this.txtVitiBotimit);
@@ -524,5 +537,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnShto;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Button btnAddCategory;
+        private System.Windows.Forms.Label lblKopjet;
     }
 }
