@@ -1,4 +1,5 @@
-﻿using Bibloteka.DAL;
+﻿using Bibloteka.BO;
+using Bibloteka.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,32 @@ namespace Bibloteka.BLL
         {
             dg.DataSource = null;
             dg.DataSource = HuazimetDAL.GetLoans();
+            dg.Columns[0].Visible = false;
+            dg.Columns[1].Visible = false;
+            dg.Columns[2].Visible = false;
+            dg.Columns[3].Visible = false;
+            dg.Columns[10].Visible = false;
+            dg.Columns[9].Width = 165;
+            dg.Columns[4].Width = 150;
+            dg.Columns[5].Width = 150;
+
+        }
+
+        public static int ShtoHuazim(Huazimet huazimet)
+        {
+            return HuazimetDAL.Insert(huazimet);
+        }
+
+        public static int LargoHuazim(Huazimet huazimet)
+        {
+           return HuazimetDAL.LargoHuazim(huazimet);
+        }
+
+        public static void SelectHuazimetDetajet(DataGridView dg)
+        {
+            dg.DataSource = null;
+            dg.DataSource = HuazimetDAL.GetLoans();
+            dg.Columns[10].Visible = false;
         }
     }
 }

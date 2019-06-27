@@ -72,7 +72,7 @@
             this.txtFjalekalimi.Location = new System.Drawing.Point(212, 483);
             this.txtFjalekalimi.Name = "txtFjalekalimi";
             this.txtFjalekalimi.Size = new System.Drawing.Size(236, 26);
-            this.txtFjalekalimi.TabIndex = 48;
+            this.txtFjalekalimi.TabIndex = 6;
             this.txtFjalekalimi.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // btnClear
@@ -107,7 +107,7 @@
             this.txtEmail.Location = new System.Drawing.Point(212, 341);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(236, 28);
-            this.txtEmail.TabIndex = 45;
+            this.txtEmail.TabIndex = 4;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtNrTel
@@ -116,7 +116,7 @@
             this.txtNrTel.Location = new System.Drawing.Point(212, 293);
             this.txtNrTel.Name = "txtNrTel";
             this.txtNrTel.Size = new System.Drawing.Size(236, 28);
-            this.txtNrTel.TabIndex = 44;
+            this.txtNrTel.TabIndex = 3;
             this.txtNrTel.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtMbiemri
@@ -125,7 +125,7 @@
             this.txtMbiemri.Location = new System.Drawing.Point(212, 246);
             this.txtMbiemri.Name = "txtMbiemri";
             this.txtMbiemri.Size = new System.Drawing.Size(236, 28);
-            this.txtMbiemri.TabIndex = 43;
+            this.txtMbiemri.TabIndex = 2;
             this.txtMbiemri.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtEmri
@@ -134,7 +134,7 @@
             this.txtEmri.Location = new System.Drawing.Point(212, 200);
             this.txtEmri.Name = "txtEmri";
             this.txtEmri.Size = new System.Drawing.Size(236, 28);
-            this.txtEmri.TabIndex = 42;
+            this.txtEmri.TabIndex = 1;
             this.txtEmri.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // lblFjalekalimi
@@ -366,7 +366,7 @@
             this.txtNofka.Location = new System.Drawing.Point(212, 436);
             this.txtNofka.Name = "txtNofka";
             this.txtNofka.Size = new System.Drawing.Size(236, 28);
-            this.txtNofka.TabIndex = 45;
+            this.txtNofka.TabIndex = 5;
             this.txtNofka.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // lblID
@@ -386,7 +386,7 @@
             this.txtID.Location = new System.Drawing.Point(212, 154);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(236, 28);
-            this.txtID.TabIndex = 42;
+            this.txtID.TabIndex = 0;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // ReadersForm

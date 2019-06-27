@@ -18,6 +18,7 @@ namespace Bibloteka
         {
             InitializeComponent();
         }
+
         Issue_ReturnForm IR = new Issue_ReturnForm();
 
         private void btnShto_Click(object sender, EventArgs e)
@@ -26,15 +27,17 @@ namespace Bibloteka
             IR.Show();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            Issue_ReturnForm IR = new Issue_ReturnForm();
-            IR.Show();
-        }
-
         private void LoansForm_Load(object sender, EventArgs e)
         {
+            dgvHuazimetDetajet.Visible = false;
             HuazimetBLL.SelectHuazimet(dgvHuazimet);
+        }
+
+        private void btnShikoDetajet_Click(object sender, EventArgs e)
+        {
+            dgvHuazimet.Visible = false;
+            dgvHuazimetDetajet.Visible = true;
+            HuazimetBLL.SelectHuazimetDetajet(dgvHuazimetDetajet);
         }
     }
 }

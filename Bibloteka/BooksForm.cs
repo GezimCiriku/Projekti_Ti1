@@ -58,8 +58,7 @@ namespace Bibloteka
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            Clear();
-           
+            Clear();    
         }
 
         private void btnShto_Click(object sender, EventArgs e)
@@ -88,15 +87,6 @@ namespace Bibloteka
             {
                 MessageBox.Show("Unsuccesful Insert\n" + ex.Message);
                 throw;
-            }
-
-            while (objL.NrKopjeve!=0)
-            {
-                //shto kopje te librit 
-                Kopja kopja = new Kopja(0, objL.LibriID, "Ne rregull", true);
-                
-
-                objL.NrKopjeve--;
             }
 
             LibriBLL.SelectBooks(dgvBooks);
