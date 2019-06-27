@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoansForm));
             this.dgvHuazimet = new System.Windows.Forms.DataGridView();
-            this.txtSearchReaders = new System.Windows.Forms.TextBox();
+            this.txtSearchHuazime = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnShto = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnShikoDetajet = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -49,13 +49,14 @@
             this.dgvHuazimet.Size = new System.Drawing.Size(1146, 596);
             this.dgvHuazimet.TabIndex = 72;
             // 
-            // txtSearchReaders
+            // txtSearchHuazime
             // 
-            this.txtSearchReaders.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchReaders.Location = new System.Drawing.Point(186, 78);
-            this.txtSearchReaders.Name = "txtSearchReaders";
-            this.txtSearchReaders.Size = new System.Drawing.Size(615, 28);
-            this.txtSearchReaders.TabIndex = 70;
+            this.txtSearchHuazime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchHuazime.Location = new System.Drawing.Point(186, 78);
+            this.txtSearchHuazime.Name = "txtSearchHuazime";
+            this.txtSearchHuazime.Size = new System.Drawing.Size(615, 28);
+            this.txtSearchHuazime.TabIndex = 70;
+            this.txtSearchHuazime.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearchReaders_KeyUp);
             // 
             // lblSearch
             // 
@@ -162,7 +163,7 @@
             this.Controls.Add(this.btnShikoDetajet);
             this.Controls.Add(this.btnShto);
             this.Controls.Add(this.dgvHuazimet);
-            this.Controls.Add(this.txtSearchReaders);
+            this.Controls.Add(this.txtSearchHuazime);
             this.Controls.Add(this.lblSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(334, 224);
@@ -180,7 +181,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvHuazimet;
-        private System.Windows.Forms.TextBox txtSearchReaders;
+        private System.Windows.Forms.TextBox txtSearchHuazime;
         private System.Windows.Forms.Label lblSearch;
         private Bunifu.Framework.UI.BunifuFlatButton btnShto;
         private Bunifu.Framework.UI.BunifuFlatButton btnShikoDetajet;

@@ -84,6 +84,78 @@ namespace Bibloteka.DAL
             return listaHuazimeve;
         }
 
+        public static List<Huazimet> SearchLoans(string search)
+        {
+            List<Huazimet> listaHuazimet = new List<Huazimet>();
+            SqlConnection conn = DBHelper.GetConnection();
+
+            try
+            {
+                string cmdText = "usp_SearchLoans";
+                SqlCommand SearchLoans = new SqlCommand(cmdText, conn);
+                SearchLoans.CommandType = CommandType.StoredProcedure;
+
+
+                SqlParameter sqlPrm = SearchLoans.Parameters.Add("@search", SqlDbType.VarChar);
+                sqlPrm.Direction = ParameterDirection.Input;
+                sqlPrm.Value = search;
+
+                conn.Open();
+
+                SqlDataReader reader = SearchLoans.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Huazimet objL = new Huazimet();
+
+                    objL.HuazimiID = int.Parse(reader["HuazimiID"].ToString());
+
+                    objL.PmID = int.Parse(reader["PmID"].ToString());
+
+                    objL.LibriID = int.Parse(reader["LibriID"].ToString());
+
+                    objL.KopjaID = int.Parse(reader["KopjaID"].ToString());
+
+                    Pjesemarresit objP = new Pjesemarresit();
+                    string[] pm = reader["Lexuesi"].ToString().Split(' ');
+                    objP.Emri = pm[0];
+                    objP.Mbiemri = pm[1];
+
+                    objL.Lexuesi = objP.Emri + " " + objP.Mbiemri;
+
+                    objL.Libri = reader["Titulli"].ToString();
+
+                    objL.DataHuazimit = DateTime.Parse(reader["DataHuazimi"].ToString());
+
+                    objL.AfatiKthimit = DateTime.Parse(reader["AfatiKthimit"].ToString());
+
+                    try
+                    {
+                        objL.DataKthimit = DateTime.Parse(reader["DataKthimit"].ToString());
+                    }
+                    catch (Exception)
+                    {
+                        objL.DataKthimit = null;
+                    }
+
+                    objL.Verejtje = reader["Verejtje"].ToString();
+
+
+                    listaHuazimet.Add(objL);
+                }
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+            finally
+            {
+                DBHelper.CloseConnection(conn);
+            }
+
+            return listaHuazimet;
+        }
+
         public static int LargoHuazim(Huazimet huazimet)
         {
             SqlConnection conn = DBHelper.GetConnection();

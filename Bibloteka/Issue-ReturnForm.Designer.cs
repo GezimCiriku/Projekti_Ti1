@@ -373,6 +373,7 @@
             this.txtVerejtej.Name = "txtVerejtej";
             this.txtVerejtej.Size = new System.Drawing.Size(200, 58);
             this.txtVerejtej.TabIndex = 93;
+            this.txtVerejtej.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerejtej_KeyPress);
             // 
             // txtKopjaID
             // 
@@ -380,6 +381,7 @@
             this.txtKopjaID.Name = "txtKopjaID";
             this.txtKopjaID.Size = new System.Drawing.Size(200, 22);
             this.txtKopjaID.TabIndex = 94;
+            this.txtKopjaID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKopjaID_KeyPress);
             // 
             // lblNumriKopjeve
             // 

@@ -25,7 +25,6 @@ namespace Bibloteka
         {
             this.Hide();
             Issue_ReturnForm IR = new Issue_ReturnForm();
-            IR.Closed += (s, args) => this.Close();
             IR.Show();
 
             //Issue_ReturnForm IR = new Issue_ReturnForm();
@@ -43,6 +42,18 @@ namespace Bibloteka
             dgvHuazimet.Visible = false;
             dgvHuazimetDetajet.Visible = true;
             HuazimetBLL.SelectHuazimetDetajet(dgvHuazimetDetajet);
+        }
+
+        private void txtSearchReaders_KeyUp(object sender, KeyEventArgs e)
+        {
+            string search = txtSearchHuazime.Text;
+
+            HuazimetBLL.SearchHuazimet(dgvHuazimet, search);
+
+            if (search == "")
+            {
+                HuazimetBLL.SelectHuazimet(dgvHuazimet);
+            }
         }
     }
 }

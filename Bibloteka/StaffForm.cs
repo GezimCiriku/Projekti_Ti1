@@ -138,5 +138,15 @@ namespace Bibloteka
 
             PjesemarresiBLL.SelectPm(dgvStaff,2);
         }
+
+        private void txtEmri_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || char.IsWhiteSpace(e.KeyChar));
+        }
+
+        private void txtNrTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

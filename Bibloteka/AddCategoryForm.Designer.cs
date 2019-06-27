@@ -111,6 +111,7 @@
             this.txtKategoria.Name = "txtKategoria";
             this.txtKategoria.Size = new System.Drawing.Size(218, 26);
             this.txtKategoria.TabIndex = 24;
+            this.txtKategoria.TextChanged += new System.EventHandler(this.txtKategoria_TextChanged);
             // 
             // lblKategoria
             // 

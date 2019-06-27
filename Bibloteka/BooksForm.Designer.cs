@@ -76,10 +76,12 @@
             // 
             this.txtVitiBotimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVitiBotimit.Location = new System.Drawing.Point(232, 410);
+            this.txtVitiBotimit.MaxLength = 4;
             this.txtVitiBotimit.Name = "txtVitiBotimit";
             this.txtVitiBotimit.Size = new System.Drawing.Size(236, 26);
             this.txtVitiBotimit.TabIndex = 6;
             this.txtVitiBotimit.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
+            this.txtVitiBotimit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVitiBotimit_KeyPress);
             // 
             // cmbKategoriaID
             // 
@@ -125,6 +127,7 @@
             this.txtMbiemriAutori.Size = new System.Drawing.Size(236, 28);
             this.txtMbiemriAutori.TabIndex = 9;
             this.txtMbiemriAutori.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
+            this.txtMbiemriAutori.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTitulli_KeyPress);
             // 
             // txtEmriAutori
             // 
@@ -134,15 +137,18 @@
             this.txtEmriAutori.Size = new System.Drawing.Size(236, 28);
             this.txtEmriAutori.TabIndex = 8;
             this.txtEmriAutori.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
+            this.txtEmriAutori.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTitulli_KeyPress);
             // 
             // txtNrKopjeve
             // 
             this.txtNrKopjeve.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNrKopjeve.Location = new System.Drawing.Point(232, 455);
+            this.txtNrKopjeve.MaxLength = 3;
             this.txtNrKopjeve.Name = "txtNrKopjeve";
             this.txtNrKopjeve.Size = new System.Drawing.Size(236, 28);
             this.txtNrKopjeve.TabIndex = 7;
             this.txtNrKopjeve.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
+            this.txtNrKopjeve.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVitiBotimit_KeyPress);
             // 
             // txtGjuha
             // 
@@ -152,6 +158,7 @@
             this.txtGjuha.Size = new System.Drawing.Size(236, 28);
             this.txtGjuha.TabIndex = 4;
             this.txtGjuha.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
+            this.txtGjuha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTitulli_KeyPress);
             // 
             // txtShtepiaBotuese
             // 
@@ -161,6 +168,7 @@
             this.txtShtepiaBotuese.Size = new System.Drawing.Size(236, 28);
             this.txtShtepiaBotuese.TabIndex = 3;
             this.txtShtepiaBotuese.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
+            this.txtShtepiaBotuese.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTitulli_KeyPress);
             // 
             // lblMbiemriAutori
             // 
@@ -176,10 +184,12 @@
             // 
             this.txtISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtISBN.Location = new System.Drawing.Point(232, 220);
+            this.txtISBN.MaxLength = 13;
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(236, 28);
             this.txtISBN.TabIndex = 2;
             this.txtISBN.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
+            this.txtISBN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVitiBotimit_KeyPress);
             // 
             // lblEmriAutori
             // 
@@ -199,6 +209,7 @@
             this.txtTitulli.Size = new System.Drawing.Size(236, 28);
             this.txtTitulli.TabIndex = 1;
             this.txtTitulli.TextChanged += new System.EventHandler(this.txtLibriID_TextChanged);
+            this.txtTitulli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTitulli_KeyPress);
             // 
             // lblNrKopjeve
             // 

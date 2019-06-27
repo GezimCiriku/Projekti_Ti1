@@ -135,6 +135,7 @@
             this.txtNrTel.Size = new System.Drawing.Size(236, 28);
             this.txtNrTel.TabIndex = 75;
             this.txtNrTel.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            this.txtNrTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNrTel_KeyPress);
             // 
             // txtMbiemri
             // 
@@ -144,6 +145,7 @@
             this.txtMbiemri.Size = new System.Drawing.Size(236, 28);
             this.txtMbiemri.TabIndex = 74;
             this.txtMbiemri.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            this.txtMbiemri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmri_KeyPress);
             // 
             // txtID
             // 
@@ -163,6 +165,7 @@
             this.txtEmri.Size = new System.Drawing.Size(236, 28);
             this.txtEmri.TabIndex = 73;
             this.txtEmri.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            this.txtEmri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmri_KeyPress);
             // 
             // lblFjalekalimi
             // 

@@ -27,6 +27,16 @@ namespace Bibloteka.BLL
             }
         }
 
+        public static int CountMembers()
+        {
+            return PjesemarresiDAL.CountMembers();
+        }
+
+        public static int CountReaders()
+        {
+            return PjesemarresiDAL.CountReaders();
+        }
+
         public static int ShtoLexues(Pjesemarresit pm)
         {
             return PjesemarresiDAL.Insert(pm);

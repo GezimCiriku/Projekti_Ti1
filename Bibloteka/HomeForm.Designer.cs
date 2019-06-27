@@ -38,12 +38,12 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblReaders = new System.Windows.Forms.Label();
             this.lblMembers = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTotalMembers1 = new System.Windows.Forms.Label();
             this.panBooks = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -145,7 +145,7 @@
             this.panel5.BackColor = System.Drawing.Color.DarkGreen;
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.lblReaders);
             this.panel5.Location = new System.Drawing.Point(398, 108);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(268, 75);
@@ -172,16 +172,16 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Lexuesit";
             // 
-            // label7
+            // lblReaders
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 29);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "8";
+            this.lblReaders.AutoSize = true;
+            this.lblReaders.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReaders.ForeColor = System.Drawing.Color.White;
+            this.lblReaders.Location = new System.Drawing.Point(3, 11);
+            this.lblReaders.Name = "lblReaders";
+            this.lblReaders.Size = new System.Drawing.Size(27, 29);
+            this.lblReaders.TabIndex = 0;
+            this.lblReaders.Text = "8";
             // 
             // lblMembers
             // 
@@ -199,7 +199,7 @@
             this.panel4.BackColor = System.Drawing.Color.DarkBlue;
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.lblTotalMembers1);
             this.panel4.Location = new System.Drawing.Point(35, 108);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(268, 75);
@@ -226,16 +226,16 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Anetaret Total";
             // 
-            // label5
+            // lblTotalMembers1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 29);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "10";
+            this.lblTotalMembers1.AutoSize = true;
+            this.lblTotalMembers1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalMembers1.ForeColor = System.Drawing.Color.White;
+            this.lblTotalMembers1.Location = new System.Drawing.Point(3, 11);
+            this.lblTotalMembers1.Name = "lblTotalMembers1";
+            this.lblTotalMembers1.Size = new System.Drawing.Size(41, 29);
+            this.lblTotalMembers1.TabIndex = 0;
+            this.lblTotalMembers1.Text = "10";
             // 
             // panBooks
             // 
@@ -403,6 +403,7 @@
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "HomeForm";
+            this.Activated += new System.EventHandler(this.HomeForm_Activated);
             this.Load += new System.EventHandler(this.HomeForm_Load);
             this.panMembers.ResumeLayout(false);
             this.panMembers.PerformLayout();
@@ -442,12 +443,12 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblReaders;
         private System.Windows.Forms.Label lblMembers;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTotalMembers1;
         private System.Windows.Forms.Panel panBooks;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;

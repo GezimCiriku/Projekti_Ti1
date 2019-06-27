@@ -68,10 +68,10 @@
             // 
             // txtFjalekalimi
             // 
-            this.txtFjalekalimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFjalekalimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFjalekalimi.Location = new System.Drawing.Point(212, 483);
             this.txtFjalekalimi.Name = "txtFjalekalimi";
-            this.txtFjalekalimi.Size = new System.Drawing.Size(236, 26);
+            this.txtFjalekalimi.Size = new System.Drawing.Size(236, 28);
             this.txtFjalekalimi.TabIndex = 6;
             this.txtFjalekalimi.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
@@ -118,6 +118,7 @@
             this.txtNrTel.Size = new System.Drawing.Size(236, 28);
             this.txtNrTel.TabIndex = 3;
             this.txtNrTel.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            this.txtNrTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNrTel_KeyPress);
             // 
             // txtMbiemri
             // 
@@ -127,6 +128,7 @@
             this.txtMbiemri.Size = new System.Drawing.Size(236, 28);
             this.txtMbiemri.TabIndex = 2;
             this.txtMbiemri.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            this.txtMbiemri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmri_KeyPress);
             // 
             // txtEmri
             // 
@@ -136,6 +138,7 @@
             this.txtEmri.Size = new System.Drawing.Size(236, 28);
             this.txtEmri.TabIndex = 1;
             this.txtEmri.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            this.txtEmri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmri_KeyPress);
             // 
             // lblFjalekalimi
             // 

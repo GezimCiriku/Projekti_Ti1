@@ -24,6 +24,16 @@ namespace Bibloteka.BLL
             return LibriDAL.Insert(libri);
         }
 
+        public static int CountHuazimet()
+        {
+            return LibriDAL.CountHuazimet();
+        }
+
+        public static int CountKthimet()
+        {
+            return LibriDAL.CountKthimet();
+        }
+
         public static bool Edit(Libri libri, Autori autori)
         {
             return LibriDAL.UpdateLibri(libri,autori);

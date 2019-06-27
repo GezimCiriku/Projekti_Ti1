@@ -54,7 +54,6 @@ namespace Bibloteka
         
         private void btnReaders_Click(object sender, EventArgs e)
         {
-            
             SidePanel.Top = btnReaders.Top;
             bf.Hide();
             rf.Show();
@@ -66,8 +65,7 @@ namespace Bibloteka
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
-        {
-           
+        {  
             SidePanel.Top = btnStaff.Top;
             bf.Hide();
             rf.Hide();
@@ -108,6 +106,7 @@ namespace Bibloteka
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
+          
             
         }
 
@@ -119,8 +118,7 @@ namespace Bibloteka
             sf.Close();
             hf.Close();
             mp.Close();
-            lf.Close();
-           
+            lf.Close();        
         }
 
         private void btnLoans_Click(object sender, EventArgs e)
@@ -132,8 +130,7 @@ namespace Bibloteka
             sf.Hide();
             mp.Hide();
             lf.Show();
-            lf.Focus();
-           
+            lf.Focus();       
         }
   
     }

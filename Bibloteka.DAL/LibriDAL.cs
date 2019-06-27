@@ -13,7 +13,6 @@ namespace Bibloteka.DAL
     public class LibriDAL
     {
        
-
         public static List<Libri_Autori> GetBooks()
         {
             List<Libri_Autori> listaLibrave = new List<Libri_Autori>();
@@ -65,6 +64,60 @@ namespace Bibloteka.DAL
             }
 
             return listaLibrave;
+        }
+
+        public static int CountKthimet()
+        {
+            SqlConnection conn = DBHelper.GetConnection();
+
+            try
+            {
+                string proc = "dbo.usp_CountKthimet";
+
+                SqlCommand cmd = new SqlCommand(proc, conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlParameter sqlPrm = cmd.Parameters.Add("@number", SqlDbType.Int);
+                sqlPrm.Direction = ParameterDirection.Output;
+
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                int number = int.Parse(sqlPrm.Value.ToString());
+                return number;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static int CountHuazimet()
+        {
+            SqlConnection conn = DBHelper.GetConnection();
+
+            try
+            {
+                string proc = "dbo.usp_CountHuazimet";
+
+                SqlCommand cmd = new SqlCommand(proc, conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlParameter sqlPrm = cmd.Parameters.Add("@number", SqlDbType.Int);
+                sqlPrm.Direction = ParameterDirection.Output;
+
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                int number = int.Parse(sqlPrm.Value.ToString());
+                return number;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public static int Insert(Libri libri)
@@ -291,7 +344,6 @@ namespace Bibloteka.DAL
                 throw;
             }       
         }
-
 
     }
 }

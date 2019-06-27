@@ -43,5 +43,12 @@ namespace Bibloteka.BLL
             dg.DataSource = HuazimetDAL.GetLoans();
             dg.Columns[10].Visible = false;
         }
+
+        public static void SearchHuazimet(DataGridView dg, string search)
+        {
+            dg.DataSource = null;
+            dg.DataSource = HuazimetDAL.SearchLoans(search);
+          //  dg.Columns[1].Visible = false;
+        }
     }
 }

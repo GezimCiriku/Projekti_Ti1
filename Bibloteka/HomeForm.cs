@@ -20,9 +20,17 @@ namespace Bibloteka
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-            lblTotalBooks.Text = LibriBLL.CountBooks().ToString();
+            
+        }
 
-            lblReturnedBooks.Text = (int.Parse(lblTotalBooks.Text) - int.Parse(lblIssuedBooks.Text)).ToString();
+        private void HomeForm_Activated(object sender, EventArgs e)
+        {
+            lblTotalBooks.Text = LibriBLL.CountBooks().ToString();
+            lblIssuedBooks.Text = LibriBLL.CountHuazimet().ToString();
+            lblReturnedBooks.Text = LibriBLL.CountKthimet().ToString();
+
+            lblTotalMembers1.Text = PjesemarresiBLL.CountMembers().ToString();
+            lblReaders.Text = PjesemarresiBLL.CountReaders().ToString();
         }
     }
 }

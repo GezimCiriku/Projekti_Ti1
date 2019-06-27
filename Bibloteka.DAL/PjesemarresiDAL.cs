@@ -29,7 +29,16 @@ namespace Bibloteka.DAL
 
                 conn.Open();
                 int result = (int)ValidateLoginCmd.ExecuteScalar();
-                return result == 1;
+
+                if (result==1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+              //  return result == 1;
             }
             catch (Exception)
             {
@@ -38,6 +47,60 @@ namespace Bibloteka.DAL
             finally
             {
                 DBHelper.CloseConnection(conn);
+            }
+        }
+
+        public static int CountReaders()
+        {
+            SqlConnection conn = DBHelper.GetConnection();
+
+            try
+            {
+                string proc = "dbo.usp_CountReaders";
+
+                SqlCommand cmd = new SqlCommand(proc, conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlParameter sqlPrm = cmd.Parameters.Add("@number", SqlDbType.Int);
+                sqlPrm.Direction = ParameterDirection.Output;
+
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                int number = int.Parse(sqlPrm.Value.ToString());
+                return number;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static int CountMembers()
+        {
+            SqlConnection conn = DBHelper.GetConnection();
+
+            try
+            {
+                string proc = "dbo.usp_CountMembers";
+
+                SqlCommand cmd = new SqlCommand(proc, conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlParameter sqlPrm = cmd.Parameters.Add("@number", SqlDbType.Int);
+                sqlPrm.Direction = ParameterDirection.Output;
+
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                int number = int.Parse(sqlPrm.Value.ToString());
+                return number;
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 

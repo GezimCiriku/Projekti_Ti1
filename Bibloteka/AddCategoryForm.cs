@@ -38,6 +38,7 @@ namespace Bibloteka
         private void AddCategoryForm_Load(object sender, EventArgs e)
         {
             KategoriaBLL.SelectCategories(dgvCategories);
+            btnShto.Enabled = false;
         }
 
         private void dgvCategories_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -71,6 +72,11 @@ namespace Bibloteka
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtKategoria_TextChanged(object sender, EventArgs e)
+        {
+            btnShto.Enabled = true;
         }
     }
 }
