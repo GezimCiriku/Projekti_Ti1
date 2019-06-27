@@ -150,7 +150,7 @@
             this.dgvHuazimetDetajet.Location = new System.Drawing.Point(88, 150);
             this.dgvHuazimetDetajet.Name = "dgvHuazimetDetajet";
             this.dgvHuazimetDetajet.RowTemplate.Height = 24;
-            this.dgvHuazimetDetajet.Size = new System.Drawing.Size(1170, 605);
+            this.dgvHuazimetDetajet.Size = new System.Drawing.Size(1170, 584);
             this.dgvHuazimetDetajet.TabIndex = 75;
             // 
             // LoansForm

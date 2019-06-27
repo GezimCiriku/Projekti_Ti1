@@ -23,8 +23,13 @@ namespace Bibloteka
 
         private void btnShto_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Issue_ReturnForm IR = new Issue_ReturnForm();
+            IR.Closed += (s, args) => this.Close();
             IR.Show();
+
+            //Issue_ReturnForm IR = new Issue_ReturnForm();
+            //IR.Show();
         }
 
         private void LoansForm_Load(object sender, EventArgs e)

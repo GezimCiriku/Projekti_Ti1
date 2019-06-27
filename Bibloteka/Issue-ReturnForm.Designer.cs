@@ -213,7 +213,7 @@
             // 
             this.lblLibri.AutoSize = true;
             this.lblLibri.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLibri.Location = new System.Drawing.Point(68, 330);
+            this.lblLibri.Location = new System.Drawing.Point(68, 211);
             this.lblLibri.Name = "lblLibri";
             this.lblLibri.Size = new System.Drawing.Size(50, 24);
             this.lblLibri.TabIndex = 84;
@@ -223,7 +223,7 @@
             // 
             this.lblLexuesi.AutoSize = true;
             this.lblLexuesi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLexuesi.Location = new System.Drawing.Point(68, 272);
+            this.lblLexuesi.Location = new System.Drawing.Point(68, 153);
             this.lblLexuesi.Name = "lblLexuesi";
             this.lblLexuesi.Size = new System.Drawing.Size(81, 24);
             this.lblLexuesi.TabIndex = 91;
@@ -238,22 +238,24 @@
             this.lblLibriID.Size = new System.Drawing.Size(67, 24);
             this.lblLibriID.TabIndex = 89;
             this.lblLibriID.Text = "LibriID:";
+            this.lblLibriID.Visible = false;
             // 
             // lblPmID
             // 
             this.lblPmID.AutoSize = true;
             this.lblPmID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPmID.Location = new System.Drawing.Point(68, 213);
+            this.lblPmID.Location = new System.Drawing.Point(75, 71);
             this.lblPmID.Name = "lblPmID";
             this.lblPmID.Size = new System.Drawing.Size(60, 24);
             this.lblPmID.TabIndex = 89;
             this.lblPmID.Text = "PmID:";
+            this.lblPmID.Visible = false;
             // 
             // lblKopjaID
             // 
             this.lblKopjaID.AutoSize = true;
             this.lblKopjaID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKopjaID.Location = new System.Drawing.Point(68, 152);
+            this.lblKopjaID.Location = new System.Drawing.Point(68, 268);
             this.lblKopjaID.Name = "lblKopjaID";
             this.lblKopjaID.Size = new System.Drawing.Size(112, 24);
             this.lblKopjaID.TabIndex = 89;
@@ -263,7 +265,7 @@
             // 
             this.lblDataHuazimit.AutoSize = true;
             this.lblDataHuazimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataHuazimit.Location = new System.Drawing.Point(68, 393);
+            this.lblDataHuazimit.Location = new System.Drawing.Point(68, 330);
             this.lblDataHuazimit.Name = "lblDataHuazimit";
             this.lblDataHuazimit.Size = new System.Drawing.Size(142, 24);
             this.lblDataHuazimit.TabIndex = 89;
@@ -273,7 +275,7 @@
             // 
             this.lblAfatiKthimit.AutoSize = true;
             this.lblAfatiKthimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAfatiKthimit.Location = new System.Drawing.Point(68, 452);
+            this.lblAfatiKthimit.Location = new System.Drawing.Point(68, 389);
             this.lblAfatiKthimit.Name = "lblAfatiKthimit";
             this.lblAfatiKthimit.Size = new System.Drawing.Size(116, 24);
             this.lblAfatiKthimit.TabIndex = 91;
@@ -283,7 +285,7 @@
             // 
             this.lblDataKthimit.AutoSize = true;
             this.lblDataKthimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataKthimit.Location = new System.Drawing.Point(68, 510);
+            this.lblDataKthimit.Location = new System.Drawing.Point(68, 447);
             this.lblDataKthimit.Name = "lblDataKthimit";
             this.lblDataKthimit.Size = new System.Drawing.Size(125, 24);
             this.lblDataKthimit.TabIndex = 84;
@@ -293,7 +295,7 @@
             // 
             this.lblVerejtje.AutoSize = true;
             this.lblVerejtje.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVerejtje.Location = new System.Drawing.Point(68, 562);
+            this.lblVerejtje.Location = new System.Drawing.Point(68, 499);
             this.lblVerejtje.Name = "lblVerejtje";
             this.lblVerejtje.Size = new System.Drawing.Size(79, 24);
             this.lblVerejtje.TabIndex = 84;
@@ -309,64 +311,64 @@
             this.lblLibriID1.Size = new System.Drawing.Size(67, 24);
             this.lblLibriID1.TabIndex = 89;
             this.lblLibriID1.Text = "LibriID:";
+            this.lblLibriID1.Visible = false;
             // 
             // lblPmID1
             // 
             this.lblPmID1.AutoSize = true;
             this.lblPmID1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPmID1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblPmID1.Location = new System.Drawing.Point(268, 213);
+            this.lblPmID1.Location = new System.Drawing.Point(275, 71);
             this.lblPmID1.Name = "lblPmID1";
             this.lblPmID1.Size = new System.Drawing.Size(60, 24);
             this.lblPmID1.TabIndex = 89;
             this.lblPmID1.Text = "PmID:";
+            this.lblPmID1.Visible = false;
             // 
             // lblLexuesi1
             // 
             this.lblLexuesi1.AutoSize = true;
             this.lblLexuesi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLexuesi1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblLexuesi1.Location = new System.Drawing.Point(268, 272);
+            this.lblLexuesi1.Location = new System.Drawing.Point(268, 153);
             this.lblLexuesi1.Name = "lblLexuesi1";
-            this.lblLexuesi1.Size = new System.Drawing.Size(81, 24);
+            this.lblLexuesi1.Size = new System.Drawing.Size(0, 24);
             this.lblLexuesi1.TabIndex = 91;
-            this.lblLexuesi1.Text = "Lexuesi:";
             // 
             // lblLibri1
             // 
             this.lblLibri1.AutoSize = true;
             this.lblLibri1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLibri1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblLibri1.Location = new System.Drawing.Point(268, 330);
+            this.lblLibri1.Location = new System.Drawing.Point(268, 211);
             this.lblLibri1.Name = "lblLibri1";
-            this.lblLibri1.Size = new System.Drawing.Size(50, 24);
+            this.lblLibri1.Size = new System.Drawing.Size(0, 24);
             this.lblLibri1.TabIndex = 84;
-            this.lblLibri1.Text = "Libri:";
             // 
             // DataHuazimit1
             // 
-            this.DataHuazimit1.Location = new System.Drawing.Point(272, 393);
+            this.DataHuazimit1.Location = new System.Drawing.Point(272, 330);
             this.DataHuazimit1.Name = "DataHuazimit1";
             this.DataHuazimit1.Size = new System.Drawing.Size(200, 22);
             this.DataHuazimit1.TabIndex = 92;
             // 
             // AfatiKthimit1
             // 
-            this.AfatiKthimit1.Location = new System.Drawing.Point(272, 452);
+            this.AfatiKthimit1.Location = new System.Drawing.Point(272, 389);
             this.AfatiKthimit1.Name = "AfatiKthimit1";
             this.AfatiKthimit1.Size = new System.Drawing.Size(200, 22);
             this.AfatiKthimit1.TabIndex = 92;
             // 
             // DataKthimit1
             // 
-            this.DataKthimit1.Location = new System.Drawing.Point(272, 510);
+            this.DataKthimit1.Location = new System.Drawing.Point(272, 447);
             this.DataKthimit1.Name = "DataKthimit1";
             this.DataKthimit1.Size = new System.Drawing.Size(200, 22);
             this.DataKthimit1.TabIndex = 92;
             // 
             // txtVerejtej
             // 
-            this.txtVerejtej.Location = new System.Drawing.Point(272, 563);
+            this.txtVerejtej.Location = new System.Drawing.Point(272, 500);
             this.txtVerejtej.Multiline = true;
             this.txtVerejtej.Name = "txtVerejtej";
             this.txtVerejtej.Size = new System.Drawing.Size(200, 58);
@@ -374,7 +376,7 @@
             // 
             // txtKopjaID
             // 
-            this.txtKopjaID.Location = new System.Drawing.Point(272, 153);
+            this.txtKopjaID.Location = new System.Drawing.Point(272, 269);
             this.txtKopjaID.Name = "txtKopjaID";
             this.txtKopjaID.Size = new System.Drawing.Size(200, 22);
             this.txtKopjaID.TabIndex = 94;
@@ -388,6 +390,7 @@
             this.lblNumriKopjeve.Size = new System.Drawing.Size(104, 24);
             this.lblNumriKopjeve.TabIndex = 89;
             this.lblNumriKopjeve.Text = "NrKopjeve:";
+            this.lblNumriKopjeve.Visible = false;
             // 
             // lblNumriKopjeve1
             // 
@@ -399,6 +402,7 @@
             this.lblNumriKopjeve1.Size = new System.Drawing.Size(104, 24);
             this.lblNumriKopjeve1.TabIndex = 89;
             this.lblNumriKopjeve1.Text = "NrKopjeve:";
+            this.lblNumriKopjeve1.Visible = false;
             // 
             // Issue_ReturnForm
             // 
