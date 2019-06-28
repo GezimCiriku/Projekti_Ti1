@@ -117,11 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnBooks" xml:space="preserve">
+    <value>                 Books</value>
+  </data>
+  <data name="btnHome" xml:space="preserve">
+    <value>                 Home Page</value>
+  </data>
+  <data name="btnLoans" xml:space="preserve">
+    <value>                 Loans</value>
+  </data>
   <data name="btnLogin" xml:space="preserve">
     <value>Log in</value>
   </data>
+  <data name="btnLogOut" xml:space="preserve">
+    <value>                 Log out</value>
+  </data>
+  <data name="btnMyProfile" xml:space="preserve">
+    <value>                 My Profile</value>
+  </data>
+  <data name="btnReaders" xml:space="preserve">
+    <value>                 Readers</value>
+  </data>
+  <data name="btnStaff" xml:space="preserve">
+    <value>                 Staff</value>
+  </data>
+  <data name="label1" xml:space="preserve">
+    <value>Total Books</value>
+  </data>
+  <data name="label10" xml:space="preserve">
+    <value>General News</value>
+  </data>
+  <data name="label2" xml:space="preserve">
+    <value>Issued Books</value>
+  </data>
+  <data name="label3" xml:space="preserve">
+    <value>Returned Books</value>
+  </data>
+  <data name="label4" xml:space="preserve">
+    <value>Total Members</value>
+  </data>
+  <data name="label6" xml:space="preserve">
+    <value>Readers</value>
+  </data>
+  <data name="label8" xml:space="preserve">
+    <value>Staff</value>
+  </data>
+  <data name="lblBibloteka" xml:space="preserve">
+    <value>Library Managment System</value>
+  </data>
   <data name="lblLogin" xml:space="preserve">
     <value>Log into system</value>
+  </data>
+  <data name="lblMembers" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="lblReports" xml:space="preserve">
+    <value>Books</value>
   </data>
   <data name="txtPassword" xml:space="preserve">
     <value>Password</value>

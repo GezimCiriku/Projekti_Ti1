@@ -7,16 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Threading;
+using System.Globalization;
+using System.Reflection;
+using System.Resources;
 
 namespace Bibloteka
 {
     public partial class MainMenu : Form
     {
+        CultureInfo current = Thread.CurrentThread.CurrentUICulture;
+        Assembly a = Assembly.Load("Bibloteka");
+      
+        bool albFlag = LoginForm.albFlag;
+
         public MainMenu()
         {
             InitializeComponent();
+            ResourceManager rm = new ResourceManager("Bibloteka.Lang.langRes", a);
+
+            if (!albFlag)
+            {
+                CultureInfo ci = new CultureInfo("en-US");
+                btnHome.Text= rm.GetString("btnHome", ci);
+                btnViewProfile.Text = rm.GetString("btnMyProfile", ci);
+                btnBooks.Text = rm.GetString("btnBooks", ci);
+                btnReaders.Text = rm.GetString("btnReaders", ci);
+                btnStaff.Text = rm.GetString("btnStaff", ci);
+                btnLoans.Text = rm.GetString("btnLoans", ci);
+                btnLogOut.Text = rm.GetString("btnLogOut", ci);
+                lblBibloteka.Text = rm.GetString("lblBibloteka", ci);
+            }
         }
+
+
 
         BooksForm bf = new BooksForm();
         ReadersForm rf = new ReadersForm();

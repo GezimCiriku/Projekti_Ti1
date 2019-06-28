@@ -117,11 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnBooks" xml:space="preserve">
+    <value>Librat</value>
+  </data>
+  <data name="btnHome" xml:space="preserve">
+    <value>Faqja kryesore</value>
+  </data>
+  <data name="btnLoans" xml:space="preserve">
+    <value>Huazimet</value>
+  </data>
   <data name="btnLogin" xml:space="preserve">
     <value>Kyçu</value>
   </data>
+  <data name="btnLogOut" xml:space="preserve">
+    <value>Shkyçu</value>
+  </data>
+  <data name="btnMyProfile" xml:space="preserve">
+    <value>Profili im</value>
+  </data>
+  <data name="btnReaders" xml:space="preserve">
+    <value>Lexuesit</value>
+  </data>
+  <data name="btnStaff" xml:space="preserve">
+    <value>Stafi</value>
+  </data>
+  <data name="label1" xml:space="preserve">
+    <value>Librat Total</value>
+  </data>
+  <data name="label10" xml:space="preserve">
+    <value>Informata te pergjithshme</value>
+  </data>
+  <data name="label2" xml:space="preserve">
+    <value>Librat e huazuar</value>
+  </data>
+  <data name="label3" xml:space="preserve">
+    <value>Librat e kthyer</value>
+  </data>
+  <data name="label4" xml:space="preserve">
+    <value>Anetaret Total</value>
+  </data>
+  <data name="label6" xml:space="preserve">
+    <value>Lexuesit</value>
+  </data>
+  <data name="label8" xml:space="preserve">
+    <value>Stafi</value>
+  </data>
+  <data name="lblBibloteka" xml:space="preserve">
+    <value>Sistemi për menaxhimin e biblotekës</value>
+  </data>
   <data name="lblLogin" xml:space="preserve">
     <value>Kyçja ne sistem</value>
+  </data>
+  <data name="lblMembers" xml:space="preserve">
+    <value>Anetaret</value>
+  </data>
+  <data name="lblReports" xml:space="preserve">
+    <value>Librat</value>
   </data>
   <data name="txtPassword" xml:space="preserve">
     <value>Fjalëkalimi</value>

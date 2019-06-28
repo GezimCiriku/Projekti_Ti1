@@ -165,6 +165,7 @@
             this.Controls.Add(this.lblMemberLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcBoxMainLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseLoginForm)).EndInit();
             this.panel1.ResumeLayout(false);

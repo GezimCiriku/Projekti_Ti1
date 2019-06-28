@@ -18,6 +18,9 @@ namespace Bibloteka
 {
     public partial class LoginForm : Form
     {
+
+        public static bool albFlag { get; set; } = true;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -56,7 +59,14 @@ namespace Bibloteka
             }
             else
             {
-                MessageBox.Show("Kredenciale te gabuara, ju lutem provoni perseri");
+                if (albFlag)
+                {
+                    MessageBox.Show("Kredenciale te gabuara, ju lutem provoni perseri!");
+                }
+                else
+                {
+                    MessageBox.Show("Username or Password is incorect, please try again!");
+                }
 
                 txtUsername.text = "";
                 txtPassword.Text = "";
@@ -74,6 +84,8 @@ namespace Bibloteka
             txtUsername.text = rm.GetString("txtUsername", ci);
             txtPassword.Text = rm.GetString("txtPassword", ci);
             btnLogin.ButtonText = rm.GetString("btnLogin", ci);
+
+            albFlag = false;
         }
 
         private void btnAlbLang_Click(object sender, EventArgs e)
@@ -87,6 +99,13 @@ namespace Bibloteka
             txtUsername.text = rm.GetString("txtUsername", ci);
             txtPassword.Text = rm.GetString("txtPassword", ci);
             btnLogin.ButtonText = rm.GetString("btnLogin", ci);
+
+            albFlag = true;
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            albFlag = true;
         }
     }
 }

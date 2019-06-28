@@ -61,6 +61,33 @@ namespace Bibloteka.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Librat.
+        /// </summary>
+        internal static string btnBooks {
+            get {
+                return ResourceManager.GetString("btnBooks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Faqja kryesore.
+        /// </summary>
+        internal static string btnHome {
+            get {
+                return ResourceManager.GetString("btnHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Huazimet.
+        /// </summary>
+        internal static string btnLoans {
+            get {
+                return ResourceManager.GetString("btnLoans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kyçu.
         /// </summary>
         internal static string btnLogin {
@@ -70,11 +97,137 @@ namespace Bibloteka.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shkyçu.
+        /// </summary>
+        internal static string btnLogOut {
+            get {
+                return ResourceManager.GetString("btnLogOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profili im.
+        /// </summary>
+        internal static string btnMyProfile {
+            get {
+                return ResourceManager.GetString("btnMyProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lexuesit.
+        /// </summary>
+        internal static string btnReaders {
+            get {
+                return ResourceManager.GetString("btnReaders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stafi.
+        /// </summary>
+        internal static string btnStaff {
+            get {
+                return ResourceManager.GetString("btnStaff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Librat Total.
+        /// </summary>
+        internal static string label1 {
+            get {
+                return ResourceManager.GetString("label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Informata te pergjithshme.
+        /// </summary>
+        internal static string label10 {
+            get {
+                return ResourceManager.GetString("label10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Librat e huazuar.
+        /// </summary>
+        internal static string label2 {
+            get {
+                return ResourceManager.GetString("label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Librat e kthyer.
+        /// </summary>
+        internal static string label3 {
+            get {
+                return ResourceManager.GetString("label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anetaret Total.
+        /// </summary>
+        internal static string label4 {
+            get {
+                return ResourceManager.GetString("label4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lexuesit.
+        /// </summary>
+        internal static string label6 {
+            get {
+                return ResourceManager.GetString("label6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stafi.
+        /// </summary>
+        internal static string label8 {
+            get {
+                return ResourceManager.GetString("label8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sistemi për menaxhimin e biblotekës.
+        /// </summary>
+        internal static string lblBibloteka {
+            get {
+                return ResourceManager.GetString("lblBibloteka", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kyçja ne sistem.
         /// </summary>
         internal static string lblLogin {
             get {
                 return ResourceManager.GetString("lblLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anetaret.
+        /// </summary>
+        internal static string lblMembers {
+            get {
+                return ResourceManager.GetString("lblMembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Librat.
+        /// </summary>
+        internal static string lblReports {
+            get {
+                return ResourceManager.GetString("lblReports", resourceCulture);
             }
         }
         
