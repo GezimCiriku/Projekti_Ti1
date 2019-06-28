@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bibloteka.BLL;
+using System.Threading;
+using System.Reflection;
+using System.Resources;
+using System.Globalization;
 
 
 namespace Bibloteka
@@ -57,6 +61,32 @@ namespace Bibloteka
                 txtUsername.text = "";
                 txtPassword.Text = "";
             }
+        }
+
+        private void btnEngLang_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("al-AL");
+            CultureInfo ci = new CultureInfo("en-US");
+            Assembly a = Assembly.Load("Bibloteka");
+            ResourceManager rm = new ResourceManager("Bibloteka.Lang.langRes", a);
+
+            lblMemberLogin.Text = rm.GetString("lblLogin", ci);
+            txtUsername.text = rm.GetString("txtUsername", ci);
+            txtPassword.Text = rm.GetString("txtPassword", ci);
+            btnLogin.ButtonText = rm.GetString("btnLogin", ci);
+        }
+
+        private void btnAlbLang_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+            CultureInfo ci = new CultureInfo("al-AL");
+            Assembly a = Assembly.Load("Bibloteka");
+            ResourceManager rm = new ResourceManager("Bibloteka.Lang.langRes", a);
+
+            lblMemberLogin.Text = rm.GetString("lblLogin", ci);
+            txtUsername.text = rm.GetString("txtUsername", ci);
+            txtPassword.Text = rm.GetString("txtPassword", ci);
+            btnLogin.ButtonText = rm.GetString("btnLogin", ci);
         }
     }
 }

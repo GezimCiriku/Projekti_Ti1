@@ -83,6 +83,16 @@
     <Compile Include="Issue-ReturnForm.Designer.cs">
       <DependentUpon>Issue-ReturnForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lang\langRes.en.Designer.cs">
+      <DependentUpon>langRes.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Lang\langRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>langRes.resx</DependentUpon>
+    </Compile>
     <Compile Include="LoansForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,10 +143,21 @@
     <EmbeddedResource Include="Issue-ReturnForm.resx">
       <DependentUpon>Issue-ReturnForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lang\langRes.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>langRes.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\langRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>langRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoansForm.resx">
       <DependentUpon>LoansForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.sq-XK.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
