@@ -27,7 +27,5 @@ namespace Bibloteka.DAL
                 objConn.Close();
             objConn.Dispose();
         }
-
-
     }
 }
