@@ -56,14 +56,14 @@ namespace Bibloteka
 
             if (KategoriaBLL.Delete(KategoriaID))
             {
-                MessageBox.Show("Delete sucessfully");
+                MessageBox.Show("Kategoria u fshie me sukses");
 
                 txtID.Text = "";
                 txtKategoria.Text = "";
             }
             else
             {
-                MessageBox.Show("Delete failed");
+                MessageBox.Show("Fshirja deshtoi");
             }
 
             KategoriaBLL.SelectCategories(dgvCategories);

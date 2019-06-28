@@ -107,5 +107,10 @@ namespace Bibloteka
         {
             albFlag = true;
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file:\\C:\\Users\\hp\\Desktop\\Projekti_Ti1\\helpi.chm", HelpNavigator.Topic, "Forma1.htm");
+        }
     }
 }

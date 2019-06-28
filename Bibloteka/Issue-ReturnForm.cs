@@ -30,6 +30,13 @@ namespace Bibloteka
         {
             LibriBLL.SelectBooks(dgvBooks);
             PjesemarresiBLL.SelectPm(dgvReaders,3);
+
+            DataHuazimit1.MaxDate = DateTime.Now;
+
+            AfatiKthimit1.MinDate = DataHuazimit1.Value;
+            AfatiKthimit1.MaxDate = DataHuazimit1.Value.AddDays(20);
+
+            DataKthimit1.MinDate = DataHuazimit1.Value;
         }
 
         private void txtSearchReaders_KeyUp(object sender, KeyEventArgs e)
@@ -98,9 +105,13 @@ namespace Bibloteka
                     {
                         MessageBox.Show("Nuk mund te merni me shume se nje liber ne te njejten kohe");
                     }
+                    else if(huazimet.HuazimiID == -1)
+                    {
+                        MessageBox.Show("Kjo kopje eshte e zene, merni nje kopje tjeter!");
+                    }
                     else
                     {
-                        MessageBox.Show("Succesful Insert");
+                        MessageBox.Show("Libri u huazu me sukses");
                         LibriBLL.SelectBooks(dgvBooks);
 
                         nrKopjeve--;
@@ -111,7 +122,7 @@ namespace Bibloteka
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Unsuccesful Insert\n" + ex.Message);
+                    MessageBox.Show("Huazimi deshtoi\n" + ex.Message);
                     throw;
                 }
             }

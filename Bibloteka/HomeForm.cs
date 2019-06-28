@@ -56,5 +56,10 @@ namespace Bibloteka
             lblTotalMembers1.Text = PjesemarresiBLL.CountMembers().ToString();
             lblReaders.Text = PjesemarresiBLL.CountReaders().ToString();
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file:\\C:\\Users\\hp\\Desktop\\Projekti_Ti1\\helpi.chm", HelpNavigator.Topic, "Forma2.htm");
+        }
     }
 }

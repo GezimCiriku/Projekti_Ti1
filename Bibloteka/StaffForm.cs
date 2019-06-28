@@ -56,11 +56,11 @@ namespace Bibloteka
             try
             {
                 pm.PmID = PjesemarresiBLL.ShtoLexues(pm);
-                MessageBox.Show("Succesful Insert");
+                MessageBox.Show("Stafi u shtua me sukses");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Unsuccesful Insert\n" + ex.Message);
+                MessageBox.Show("Shtimi deshtoi\n" + ex.Message);
                 throw;
             }
             PjesemarresiBLL.SelectPm(dgvStaff,2);
@@ -95,13 +95,13 @@ namespace Bibloteka
 
             if (PjesemarresiBLL.Edit(pm))
             {
-                MessageBox.Show("Updated Succesfuly");
+                MessageBox.Show("Perditesimi u krye me sukses");
                 Clear();
                 PjesemarresiBLL.SelectPm(dgvStaff,2);
             }
             else
             {
-                MessageBox.Show("Updated Failed");
+                MessageBox.Show("Perditesimi deshtoi");
             }
         }
 

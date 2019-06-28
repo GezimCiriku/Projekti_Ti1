@@ -31,7 +31,7 @@ namespace Bibloteka
             cmbKategoriaID.DataSource = dt;
             cmbKategoriaID.DisplayMember = dt.Columns[1].ColumnName;
             cmbKategoriaID.ValueMember = dt.Columns[0].ColumnName;
-            
+
 
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
@@ -58,7 +58,7 @@ namespace Bibloteka
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            Clear();    
+            Clear();
         }
 
         private void btnShto_Click(object sender, EventArgs e)
@@ -72,20 +72,27 @@ namespace Bibloteka
             Autori objA = new Autori();
             objA.Emri = txtEmriAutori.Text;
             objA.Mbiemri = txtMbiemriAutori.Text;
-            
-             Libri_Autori objLA = new Libri_Autori(objL, objA);
+
+            Libri_Autori objLA = new Libri_Autori(objL, objA);
 
             try
             {
                 objL.AutoriID = AutoriBLL.InsertAutor(objA);
-                objL.LibriID=LibriBLL.InsertBook(objL);
+                objL.LibriID = LibriBLL.InsertBook(objL);
                 txtLibriID.Text = objL.LibriID.ToString();
 
-                MessageBox.Show("Succesful Insert");
+                if (objL.LibriID == 0)
+                {
+                    MessageBox.Show("Nuk mund te shtoni dy libra me ISBN te njejte");
+                }
+                else
+                {
+                    MessageBox.Show("Libri u shtua me sukses");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Unsuccesful Insert\n" + ex.Message);
+                MessageBox.Show("Shtimi i librit deshtoi\n" + ex.Message);
                 throw;
             }
 
@@ -107,8 +114,6 @@ namespace Bibloteka
             txtAutoriId = dgvBooks.Rows[rowIndex].Cells[8].Value.ToString();
             txtEmriAutori.Text = dgvBooks.Rows[rowIndex].Cells[9].Value.ToString().Split(' ')[0];
             txtMbiemriAutori.Text = dgvBooks.Rows[rowIndex].Cells[9].Value.ToString().Split(' ')[1];
-
-
 
             btnDelete.Enabled = true;
             btnEdit.Enabled = true;
@@ -132,7 +137,7 @@ namespace Bibloteka
                 autor.Emri = txtEmriAutori.Text;
                 autor.Mbiemri = txtMbiemriAutori.Text;
 
-                if (LibriBLL.Edit(objL,autor))
+                if (LibriBLL.Edit(objL, autor))
                 {
                     MessageBox.Show("Updated Succesfuly");
                     Clear();
@@ -166,7 +171,7 @@ namespace Bibloteka
 
             LibriBLL.SelectBooks(dgvBooks);
         }
-  
+
         private void txtLibriID_TextChanged(object sender, EventArgs e)
         {
             btnShto.Enabled = true;
@@ -178,7 +183,7 @@ namespace Bibloteka
 
             LibriBLL.SearchBooks(dgvBooks, search);
 
-            if (search=="")
+            if (search == "")
             {
                 LibriBLL.SelectBooks(dgvBooks);
             }
@@ -187,7 +192,7 @@ namespace Bibloteka
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
             AddCategoryForm acf = new AddCategoryForm();
-            acf.ShowDialog();      
+            acf.ShowDialog();
         }
 
         private void cmbKategoriaID_Click(object sender, EventArgs e)
@@ -205,13 +210,18 @@ namespace Bibloteka
         }
 
         private void txtVitiBotimit_KeyPress(object sender, KeyPressEventArgs e)
-        {  
+        {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void txtTitulli_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back ||char.IsWhiteSpace(e.KeyChar));
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || char.IsWhiteSpace(e.KeyChar));
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file:\\C:\\Users\\hp\\Desktop\\Projekti_Ti1\\helpi.chm", HelpNavigator.Topic, "Forma4.htm");
         }
     }
 }

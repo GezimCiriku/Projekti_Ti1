@@ -40,8 +40,6 @@ namespace Bibloteka
             }
         }
 
-
-
         BooksForm bf = new BooksForm();
         ReadersForm rf = new ReadersForm();
         StaffForm sf = new StaffForm();
@@ -51,8 +49,7 @@ namespace Bibloteka
        
 
         private void btnHome_Click(object sender, EventArgs e)
-        {
-            
+        {        
             SidePanel.Top = btnHome.Top;
             bf.Hide();
             rf.Hide();
@@ -65,7 +62,6 @@ namespace Bibloteka
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
-          
             SidePanel.Top = btnBooks.Top;    
             bf.Show();
             bf.Focus();
@@ -100,7 +96,6 @@ namespace Bibloteka
             lf.Hide();
         }
 
-
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnLogOut.Top;
@@ -110,6 +105,7 @@ namespace Bibloteka
             rf.Close();
             sf.Close();
             lf.Close();
+            hf.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.Closed += (s, args) => this.Close();
             loginForm.Show();
@@ -117,7 +113,6 @@ namespace Bibloteka
 
         private void btnViewProfile_Click(object sender, EventArgs e)
         {
-            
             SidePanel.Top = btnViewProfile.Top;
             bf.Hide();
             rf.Hide();
@@ -130,8 +125,7 @@ namespace Bibloteka
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-          
-            
+            hf.Show();
         }
 
         private void btnCloseMainMenu_Click(object sender, EventArgs e)
@@ -156,6 +150,10 @@ namespace Bibloteka
             lf.Show();
             lf.Focus();       
         }
-  
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

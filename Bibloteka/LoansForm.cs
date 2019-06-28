@@ -33,6 +33,7 @@ namespace Bibloteka
 
         private void LoansForm_Load(object sender, EventArgs e)
         {
+            dgvHuazimet.Visible = true;
             dgvHuazimetDetajet.Visible = false;
             HuazimetBLL.SelectHuazimet(dgvHuazimet);
         }
@@ -54,6 +55,18 @@ namespace Bibloteka
             {
                 HuazimetBLL.SelectHuazimet(dgvHuazimet);
             }
+        }
+
+        private void LoansForm_Activated(object sender, EventArgs e)
+        {
+            dgvHuazimet.Visible = true;
+            dgvHuazimetDetajet.Visible = false;
+            HuazimetBLL.SelectHuazimet(dgvHuazimet);
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file:\\C:\\Users\\hp\\Desktop\\Projekti_Ti1\\helpi.chm", HelpNavigator.Topic, "Forma5.htm");
         }
     }
 }

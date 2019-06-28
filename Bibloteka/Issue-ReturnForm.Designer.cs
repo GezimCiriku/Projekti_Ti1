@@ -348,9 +348,12 @@
             // DataHuazimit1
             // 
             this.DataHuazimit1.Location = new System.Drawing.Point(272, 330);
+            this.DataHuazimit1.MaxDate = new System.DateTime(2019, 6, 28, 0, 0, 0, 0);
+            this.DataHuazimit1.MinDate = new System.DateTime(2019, 6, 1, 0, 0, 0, 0);
             this.DataHuazimit1.Name = "DataHuazimit1";
             this.DataHuazimit1.Size = new System.Drawing.Size(200, 22);
             this.DataHuazimit1.TabIndex = 92;
+            this.DataHuazimit1.Value = new System.DateTime(2019, 6, 28, 0, 0, 0, 0);
             // 
             // AfatiKthimit1
             // 

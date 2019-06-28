@@ -58,6 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotalBooks = new System.Windows.Forms.Label();
             this.lblReports = new System.Windows.Forms.Label();
+            this.btnHelp = new Bunifu.Framework.UI.BunifuImageButton();
             this.panMembers.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -72,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -390,11 +392,28 @@
             this.lblReports.TabIndex = 0;
             this.lblReports.Text = "Librat";
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
+            this.btnHelp.ImageActive = null;
+            this.btnHelp.InitialImage = null;
+            this.btnHelp.Location = new System.Drawing.Point(1115, 2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(38, 38);
+            this.btnHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHelp.TabIndex = 5;
+            this.btnHelp.TabStop = false;
+            this.btnHelp.Zoom = 10;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 754);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panMembers);
             this.Controls.Add(this.panBooks);
@@ -427,6 +446,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,5 +483,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTotalBooks;
         private System.Windows.Forms.Label lblReports;
+        private Bunifu.Framework.UI.BunifuImageButton btnHelp;
     }
 }

@@ -52,6 +52,11 @@ namespace Bibloteka
             try
             {
                 pm.PmID = PjesemarresiBLL.ShtoLexues(pm);
+                if (pm.PmID==0)
+                {
+                    MessageBox.Show("Rregjistrimi deshtoi!\n Lexuesi tashme ekziston ne databaze");
+                }
+                else
                 MessageBox.Show("Succesful Insert");
             }
             catch (Exception ex)
@@ -99,13 +104,13 @@ namespace Bibloteka
 
             if (PjesemarresiBLL.Edit(pm))
             {
-                MessageBox.Show("Updated Succesfuly");
+                MessageBox.Show("Perditesimi u krye me sukses");
                 Clear();
                 PjesemarresiBLL.SelectPm(dgvReaders,3);
             }
             else
             {
-                MessageBox.Show("Updated Failed");
+                MessageBox.Show("Perditesimi deshtoi");
             }
         }
 

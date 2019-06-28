@@ -58,16 +58,18 @@
             this.btnShto = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblInfo = new System.Windows.Forms.Label();
             this.btnAddCategory = new System.Windows.Forms.Button();
+            this.btnHelp = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBooks
             // 
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBooks.Location = new System.Drawing.Point(536, 127);
+            this.dgvBooks.Location = new System.Drawing.Point(541, 127);
             this.dgvBooks.Name = "dgvBooks";
             this.dgvBooks.RowTemplate.Height = 24;
-            this.dgvBooks.Size = new System.Drawing.Size(1044, 451);
+            this.dgvBooks.Size = new System.Drawing.Size(990, 451);
             this.dgvBooks.TabIndex = 40;
             this.dgvBooks.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBooks_RowHeaderMouseClick);
             this.dgvBooks.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBooks_RowHeaderMouseDoubleClick);
@@ -459,11 +461,28 @@
             this.btnAddCategory.UseVisualStyleBackColor = false;
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
+            this.btnHelp.ImageActive = null;
+            this.btnHelp.InitialImage = null;
+            this.btnHelp.Location = new System.Drawing.Point(1493, 62);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(38, 38);
+            this.btnHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHelp.TabIndex = 42;
+            this.btnHelp.TabStop = false;
+            this.btnHelp.Zoom = 10;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // BooksForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 806);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.dgvBooks);
             this.Controls.Add(this.txtVitiBotimit);
@@ -500,6 +519,7 @@
             this.Text = "BooksForm";
             this.Load += new System.EventHandler(this.BooksForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,5 +556,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnShto;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Button btnAddCategory;
+        private Bunifu.Framework.UI.BunifuImageButton btnHelp;
     }
 }

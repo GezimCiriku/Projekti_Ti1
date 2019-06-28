@@ -35,8 +35,10 @@
             this.btnShto = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnShikoDetajet = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dgvHuazimetDetajet = new System.Windows.Forms.DataGridView();
+            this.btnHelp = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHuazimet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHuazimetDetajet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvHuazimet
@@ -154,11 +156,29 @@
             this.dgvHuazimetDetajet.Size = new System.Drawing.Size(1170, 584);
             this.dgvHuazimetDetajet.TabIndex = 75;
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
+            this.btnHelp.ImageActive = null;
+            this.btnHelp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnHelp.InitialImage = null;
+            this.btnHelp.Location = new System.Drawing.Point(1220, 78);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(38, 38);
+            this.btnHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHelp.TabIndex = 76;
+            this.btnHelp.TabStop = false;
+            this.btnHelp.Zoom = 10;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // LoansForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1564, 783);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.dgvHuazimetDetajet);
             this.Controls.Add(this.btnShikoDetajet);
             this.Controls.Add(this.btnShto);
@@ -170,9 +190,11 @@
             this.Name = "LoansForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Loan";
+            this.Activated += new System.EventHandler(this.LoansForm_Activated);
             this.Load += new System.EventHandler(this.LoansForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHuazimet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHuazimetDetajet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +208,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnShto;
         private Bunifu.Framework.UI.BunifuFlatButton btnShikoDetajet;
         private System.Windows.Forms.DataGridView dgvHuazimetDetajet;
+        private Bunifu.Framework.UI.BunifuImageButton btnHelp;
     }
 }
